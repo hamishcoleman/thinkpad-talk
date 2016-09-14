@@ -1,0 +1,71 @@
+<html>
+<head>
+ <title>My personal fight against the modern laptop</title>
+
+ <!-- Required stylesheet -->
+ <link rel="stylesheet" media="screen" href="deck/core/deck.core.css">
+
+ <!-- Extension CSS files go here. Remove or add as needed. -->
+ <link rel="stylesheet" media="screen" href="deck/extensions/menu/deck.menu.css">
+ <link rel="stylesheet" media="screen" href="deck/extensions/status/deck.status.css">
+
+ <!-- Style theme. More available in /themes/style/ or create your own. -->
+ <link rel="stylesheet" media="screen" href="deck/themes/style/web-2.0.css">
+
+ <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+ <link rel="stylesheet" media="screen" href="deck/themes/transition/horizontal-slide.css">
+
+ <!-- Basic black and white print styles -->
+ <link rel="stylesheet" media="print" href="core/print.css">
+
+ <!-- Required Modernizr file -->
+ <script src="deck/modernizr.custom.js"></script>
+</head>
+
+<body>
+<div class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide">
+ <h1>Head1</h1>
+ <h3>Head3</h3>
+  <p>Hamish Coleman</p>
+</section>
+
+<section class="slide">
+ <h2>Head2</h2>
+</section>
+
+<!-- End slides. -->
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.status snippet -->
+<p class="deck-status" aria-role="status">
+ <span class="deck-status-current"></span>
+ /
+ <span class="deck-status-total"></span>
+</p>
+
+<!-- End extension snippets. -->
+</div>
+
+<!-- Required JS files. -->
+<script src="deck/jquery.min.js"></script>
+<script src="deck/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="deck/extensions/menu/deck.menu.js"></script>
+<script src="deck/extensions/status/deck.status.js"></script>
+<script src="deck/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
+
