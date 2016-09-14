@@ -1,0 +1,3 @@
+[submodule "deck"]
+	path = deck
+	url = https://github.com/imakewebthings/deck.js
