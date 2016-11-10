@@ -8,6 +8,7 @@
  <!-- Extension CSS files go here. Remove or add as needed. -->
  <link rel="stylesheet" media="screen" href="deck/extensions/menu/deck.menu.css">
  <link rel="stylesheet" media="screen" href="deck/extensions/status/deck.status.css">
+ <link rel="stylesheet" media="screen" href="deck/extensions/scale/deck.scale.css">
 
  <!-- Style theme. More available in /themes/style/ or create your own. -->
  <link rel="stylesheet" media="screen" href="deck/themes/style/web-2.0.css">
@@ -29,6 +30,7 @@
 
 <!-- Begin slides. Just make elements with a class of slide. -->
 
+<!-- * Introduction -->
 <section class="slide">
  <h1>My fight with modern laptops</h1>
  <h3>LCA2017</h3>
@@ -41,6 +43,7 @@
  </div>
 </section>
 
+<!-- ** Who am I -->
 <section class="slide">
  <h2>Who am I</h2>
  <div class="notes">
@@ -48,6 +51,7 @@
  </div>
 </section>
 
+<!-- ** What is in this talk -->
 <section class="slide">
  <h2>What is in this talk</h2>
  <div class="notes">
@@ -55,46 +59,408 @@
  </div>
 </section>
 
-<!--
-* Introduction
-** Who am I
-** What is in this talk
-** Why did I do it (what motivated me)
-*** laptop evolution
-**** my laptop opinions. compters: travel, workstation, other.
-*** scope - reducing it make it possible for me
-*** keyboard - show evolution of thinkpad keyboard
+<!-- ** Why did I do it (what motivated me) -->
+<section class="slide">
+ <h2>Why did I do it</h2>
+ <div class="notes">
+- evolution of hardware
+- beyond a certain point smaller is not always better
+- I certainly dont want cheaper at the cost of quality
+ </div>
+</section>
+
+<!-- *** laptop evolution -->
+<section class="slide">
+ <h2>Laptop evolution</h2>
+ <div class="notes">
+-
+ </div>
+</section>
+
+<!-- **** my laptop opinions. computers: travel, workstation, other. -->
+<section class="slide">
+ <h2>My laptop opinions</h2>
+ <div class="notes">
+-
+ </div>
+</section>
+
+<!-- *** scope - reducing it make it possible for me -->
+<section class="slide">
+ <h2>Scope</h2>
+ <div class="notes">
+- So, now that I have a list of things I dont like, what can I do
+- I'm not bunnie or purism - I cannot build a whole laptop
+- so, reduce the scope to the minimum feature set
+ </div>
+</section>
+
+<!-- *** keyboard - show evolution of thinkpad keyboard
     - one slide with every keyboard I can find - up to x220
         - 701c, 600x, r40, z61m x30, x61t, x220
-    - one slide with every keyboard x230 and newer
-    - final slide holding x220 and x230 side-by-side
-*** assisted by physical compatibility and ease of replacement
-*** backlight and burnouts..
+-->
+<section class="slide">
+ <h2>Keyboards - "classic"</h2>
+    <!-- FIXME:
+        Want all the captions aligned with each other
+        Want a clear gap between the two rows
+    -->
+ <table width=100% class="slide">
+  <tr>
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_701c.jpg">Thinkpad 701c (1995)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_600e_kb.jpg">Thinkpad 600e (1998)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x30_kb.jpg">Thinkpad x30 (2002)
+  <tr>
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_z61m.jpg">Thinkpad z61m (2006)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x61_kb.jpg">Thinkpad x61 (2007)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x220_kb.jpg">Thinkpad x220 (2011)
+ </table>
+ <div class="notes">
+- I like to type, I do it all day
+- Touch-typing is a muscle memory
+- Yes, there are differences with all these, but relatively small ones
+ </div>
+</section>
 
-* first steps
-** download firmware , look for tables , hexdump/search/existing research
-* breakthrough
-** mec tools
-** radare2
-** improving the radare analysis
-** looking for structures
-** chasing pointers
-** colaboration
-** initial publish
-* polishing (the thinkpad-ec project)
-** audience (the people who wanted to try to use that project)
-** issues with distribution
-** supporting more hardware
-* How does flashing work
-** Lenovo tools
-** reversing dosflash
-*** writing a simple kvm hypervisor
-*** itterating on implementing missing features
-** writing a device driver for real hardware
-** how is the firmware protected? is this a risk
-* next steps
-** Still want a newer laptop, dont want to spend money without keyboard
-** build a usb adaptor for the raw keyboard
+<!-- - one slide with every keyboard x230 and newer -->
+<section class="slide">
+ <h2>Keyboards - "modern"</h2>
+    <!-- FIXME:
+        same as previous slide
+    -->
+ <table width=100%>
+  <tr>
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x230.jpg">Thinkpad x230 (FIXME)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x240.jpg">Thinkpad x240 (FIXME)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x1g2.jpg">Thinkpad x1 gen2 (FIXME)
+  <tr>
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x250.jpg">Thinkpad x250 (FIXME)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x1g3.jpg">Thinkpad x1 gen3 (FIXME)
+   <td align=center height=45% width=30%>
+    <img src="thinkpad_x260.jpg">Thinkpad x260 (current)
+ </table>
+ <div class="notes">
+- Changing keyboards is going to happen, but I need to use many
+- Dont remove keys!
+ </div>
+</section>
+
+<!-- - final slide holding x220 and x230 side-by-side -->
+<section class="slide">
+ <h2>Keyboards - old and new</h2>
+ <table width=100%>
+  <tr>
+   <td align=center height=100% width=50%>
+    <img src="thinkpad_x220_kb.jpg">Thinkpad x220
+   <td align=center height=100% width=50%>
+    <img src="thinkpad_x230.jpg">Thinkpad x230
+ </table>
+ <div class="notes">
+- The newest "classic" keyboard vs the oldest "modern" one
+ </div>
+</section>
+
+<!-- *** assisted by physical compatibility and ease of replacement -->
+<section class="slide">
+ <h2>Replacing the x230 keyboard</h2>
+ <ul>
+  <li class="slide">Connector compatibility
+  <li class="slide">backlight and burnouts
+  <li class="slide">Many of the top keys didnt work
+  <li class="slide">None of the Fn-Combos worked properly
+  <li class="slide">Could hack the whole keyboard
+ </ul>
+ <div class="notes">
+TODO
+- add connector photos
+- add burnout photos
+- add photos of rewired keyboard
+
+- So similar that you can just plug it in.. except for a couple of issue
+- hardware hacking is possible, if laborious
+- seems a bit dirty, really
+ </div>
+</section>
+
+<!-- * first steps -->
+<section class="slide">
+ <h2>Its all just software...</h2>
+ <ul>
+  <li class="slide">Schematics of both laptops show all the keys are there
+  <li class="slide">All still connected to the Embedded Controller
+  <li class="slide">If this was open source, I'd just update the code
+ <div class="notes">
+TODO:
+- add schematic photo
+
+ </div>
+</section>
+
+<!-- ** download firmware , look for tables , hexdump/search/existing research -->
+<section class="slide">
+ <h2>... but software sucks</h2>
+ <ul>
+  <li>download firmware
+  <li class="slide">Find some existing code dumps
+  <li class="slide">Match the keyboard master tables, and some other data
+  <li class="slide">However, the firmware doesnt look 'sane'
+  <li class="slide">Still have no way to install my patch
+ <div class="notes">
+TODO:
+- add hexdump photo
+- ref old firmware dump
+- add embryonic patch details
+
+ </div>
+</section>
+
+<!-- * breakthrough -->
+<section class="slide">
+ <h2>FIXME breakthrough</h2>
+ <ul>
+  <li>mec tools
+ </ul>
+ <div class="notes">
+TODO
+- add some mec tools notes
+- ref the mectools talk
+ </div>
+</section>
+
+<!-- ** radare2 -->
+<section class="slide">
+ <h2>FIXME radare2</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** improving the radare analysis -->
+<section class="slide">
+ <h2>FIXME improving the radare analysis</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** looking for structures -->
+<section class="slide">
+ <h2>FIXME looking for structures</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** chasing pointers -->
+<section class="slide">
+ <h2>FIXME chasing pointers</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** colaboration -->
+<section class="slide">
+ <h2>FIXME colaboration</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** initial publish -->
+<section class="slide">
+ <h2>FIXME initial publish</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- * polishing (the thinkpad-ec project) -->
+<section class="slide">
+ <h2>FIXME polishing (the project)</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** audience (the people who wanted to try to use that project) -->
+<section class="slide">
+ <h2>FIXME audience</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** issues with distribution -->
+<section class="slide">
+ <h2>FIXME issues with distribution</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+- not my binaries, not allowed to distribute
+FIXME - add more notes
+ </div>
+</section>
+
+<!-- ** supporting more hardware -->
+<section class="slide">
+ <h2>FIXME supporting more hardware</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- * How does flashing work -->
+<section class="slide">
+ <h2>FIXME How does flashing work</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** Lenovo tools -->
+<section class="slide">
+ <h2>FIXME Lenovo tools</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** reversing dosflash -->
+<section class="slide">
+ <h2>FIXME reversing dosflash</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- *** writing a simple kvm hypervisor -->
+<section class="slide">
+ <h2>FIXME writing a simple kvm hypervisor</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- *** itterating on implementing missing features -->
+<section class="slide">
+ <h2>FIXME itterating on implementing missing features</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** writing a device driver for real hardware -->
+<section class="slide">
+ <h2>FIXME device driver for real hardware</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** how is the firmware protected? is this a risk -->
+<section class="slide">
+ <h2>FIXME how is the firmware protected?</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- * next steps -->
+<section class="slide">
+ <h2>FIXME next steps</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** Still want a newer laptop, dont want to spend money without keyboard -->
+<section class="slide">
+ <h2>FIXME Still want a newer laptop</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+<!-- ** build a usb adaptor for the raw keyboard -->
+<section class="slide">
+ <h2>FIXME build a usb adaptor</h2>
+ <ul>
+  <li>dot points
+ </ul>
+ <div class="notes">
+FIXME - add notes
+ </div>
+</section>
+
+
+<!--
 
 things from abstract not specifically mentioned above:
 * various lenovo/thinkpad methods for protecting flash updates
