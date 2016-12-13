@@ -39,23 +39,30 @@
 - Hi
 - questions, please raise your hand and I will stop shortly
 - slides available, etc
-- I'll show any urls at the end
+- I'll show any urls again at the end, too
  </div>
 </section>
 
 <!-- ** Who am I -->
 <section class="slide">
  <h2>Who am I</h2>
+ <ul>
+  <li>FIXME add a little more here
+  <li>I am turning into a grumpy old man who is annoyed by change.
+  <li>... but I want to do something 'constructive' about it
+ </ul>
  <div class="notes">
 - TODO
 - concerned about the pattern that the computer/design industry is taking
     (cheapening and mass-producing/lowest-common-denominatoring)
+- xkcd /1770/
  </div>
 </section>
 
 <!-- ** What is in this talk -->
 <section class="slide">
  <h2>What is in this talk</h2>
+FIXME
  <div class="notes">
 - real quick outline
  </div>
@@ -234,22 +241,23 @@ TODO:
 
 <!-- * breakthrough -->
 <section class="slide">
- <h2>FIXME breakthrough</h2>
+ <h2>breakthrough in EC firmware</h2>
  <ul>
-  <li>mec tools
+  <li>See the talk before this one :-) by the mec-tools author
+  <li>Assuming some people missed that talk FIXME
  </ul>
  <div class="notes">
 TODO
 - add some mec tools notes
-- ref the mectools talk
  </div>
 </section>
 
 <!-- ** radare2 -->
 <section class="slide">
- <h2>FIXME radare2</h2>
+ <h2>Reverse Engineering</h2>
  <ul>
-  <li>dot points
+  <li>Use Radare2 (and learn it)
+  <li>Has support for the needed ARCompact instuction set
  </ul>
  <div class="notes">
 FIXME - add notes
@@ -260,10 +268,19 @@ FIXME - add notes
 <section class="slide">
  <h2>FIXME improving the radare analysis</h2>
  <ul>
-  <li>dot points
+  <li>Radare2 ARC support was quite flakey
+  <li>Worse, the ARCompact support appeared to be half missing
+  <li>What was there was big endian only
+  <li>no jump delay slot handling made most tracing difficult
+  <li>jumps and branches were not analysed, either
+  <li>Improve illegal instruction detection - massively improving browsing
+  <li>In the visual analysis, scrolling backwards ended up going forwards!
  </ul>
  <div class="notes">
-FIXME - add notes
+FIXME
+- add notes
+- clarify or reduce the above
+- mention NUXI format used by the little endian instruction coding
  </div>
 </section>
 
