@@ -1,79 +1,71 @@
+<!DOCTYPE html>
 <html>
 <head>
  <title>My personal fight against the modern laptop</title>
-
- <!-- Required stylesheet -->
- <link rel="stylesheet" media="screen" href="deck/core/deck.core.css">
-
- <!-- Extension CSS files go here. Remove or add as needed. -->
- <link rel="stylesheet" media="screen" href="deck/extensions/menu/deck.menu.css">
- <link rel="stylesheet" media="screen" href="deck/extensions/status/deck.status.css">
- <link rel="stylesheet" media="screen" href="deck/extensions/scale/deck.scale.css">
-
- <!-- Style theme. More available in /themes/style/ or create your own. -->
- <link rel="stylesheet" media="screen" href="deck/themes/style/swiss.css">
-
- <!-- Transition theme. More available in /themes/transition/ or create your own. -->
- <!-- <link rel="stylesheet" media="screen" href="deck/themes/transition/horizontal-slide.css"> -->
-
- <link rel="stylesheet" media="screen" href="deck.console-notes.js/deck.console-notes.css">
-
- <!-- Basic black and white print styles -->
- <link rel="stylesheet" media="print" href="deck/core/print.css">
-
- <!-- Required Modernizr file -->
- <script src="deck/modernizr.custom.js"></script>
-
+ <meta charset="utf-8">
  <style>
+  @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+  @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+  @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+  body { font-family: 'Droid Serif'; }
+  h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: normal;
+  }
+  .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+  .footnote {
+    position: absolute;
+    bottom: 3em;
+  }
+
 img {
     margin-bottom: 0;
 }
 
 .caption {
     margin-bottom: 1em;
+    text-align: center;
 }
 
-ul, ol {
-    font-size-adjust: 0.8;
-}
  </style>
 </head>
-
-<body class="deck-container">
-
-<!-- Begin slides. Just make elements with a class of slide. -->
+<body>
+ <textarea id="source">
+class: center, middle
 
 <!-- * Introduction -->
-<section class="slide">
- <h1>My fight with modern laptops</h1>
- <h3>LCA2017</h3>
- <p>Hamish Coleman hamish@zot.org</p>
- <div class="notes">
+# My fight with modern laptops
+LCA2017
+.footnote[Hamish Coleman hamish@zot.org]
+
+???
 - Hi
 - questions, please raise your hand and I will stop shortly
 - slides available, etc
 - I'll show any urls again at the end, too
- </div>
-</section>
+
+---
 
 <!-- ** Who am I -->
-<section class="slide">
+
  <h2>Who am I</h2>
  <ul>
   <li>FIXME add a little more here
   <li>I am turning into a grumpy old man who is annoyed by change.
   <li>... but I want to do something 'constructive' about it
  </ul>
- <div class="notes">
+???
 - TODO
 - concerned about the pattern that the computer/design industry is taking
     (cheapening and mass-producing/lowest-common-denominatoring)
 - xkcd /1770/
- </div>
-</section>
+
+
+---
 
 <!-- ** What is in this talk -->
-<section class="slide">
+
  <h2>What is in this talk</h2>
  <ol>
   <li>What is wrong with current Laptops?
@@ -81,23 +73,25 @@ ul, ol {
   <li>How much can we change this?
   <li>Reversing firmware tables
   <li>Can I make the flash tool work from Linux?
-    <div class="slide">*SPOILER* - No</div>
  </ol>
- <div class="notes">
+???
 FIXME
 - polish the english above
 - make sure it makes sense too..
 - real quick outline
- </div>
-</section>
+
+--
+- *SPOILER* - No
+
+---
 
 <!-- ** Why did I do it (what motivated me) -->
-<section class="slide">
+
  <h2>Why did I do it</h2>
  <ul>
   <li>Increasingly, hardware doesnt seem to meet my requirements
  </ul>
- <div class="notes">
+???
 - evolution of hardware
 - beyond a certain point smaller is not always better
 - I certainly dont want cheaper at the cost of quality
@@ -106,132 +100,126 @@ FIXME
     old and crusty, but the point is that I dont like feeling that way.
     I assume that others have had the same feeling and want to encourage
     you in doing things about it.
- </div>
-</section>
+
+---
 
 <!-- *** laptop evolution -->
-<section class="slide">
+
  <h2>Laptop evolution</h2>
- <div class="notes">
+???
 -
- </div>
-</section>
+
+---
 
 <!-- **** my laptop opinions. computers: travel, workstation, other. -->
-<section class="slide">
+
  <h2>My laptop opinions</h2>
- <div class="notes">
+???
 -
- </div>
-</section>
+
+---
 
 <!-- *** scope - reducing it make it possible for me -->
-<section class="slide">
+
  <h2>Scope</h2>
- <div class="notes">
+???
 - So, now that I have a list of things I dont like, what can I do
 - I'm not bunnie or purism - I cannot build a whole laptop
 - so, reduce the scope to the minimum feature set
- </div>
-</section>
+
+---
 
 <!-- *** keyboard - show evolution of thinkpad keyboard
     - one slide with every keyboard I can find - up to x220
         - 701c, 600x, r40, z61m x30, x61t, x220
 -->
-<section class="slide">
+
  <h2>Thinkpad Keyboards - "classic"</h2>
-    <!-- FIXME:
-        Want all the captions aligned with each other
-        Want a clear gap between the two rows
-    -->
- <table width=100% class="slide">
+
+ <table>
   <tr>
-   <td align=center height=45% width=30%>
-     <img src="thinkpad_1995_701c.jpg" />
+   <td>
+     <img width=250 src="thinkpad_1995_701c.jpg" />
      <div class="caption">701c (1995)</div>
-   <td align=center height=45% width=30%>
-     <img src="thinkpad_1999_600e_kb.jpg" />
+   <td>
+     <img width=250 src="thinkpad_1999_600e_kb.jpg" />
      <div class="caption">600e (1998)</div>
-   <td align=center height=45% width=30%>
-     <img src="thinkpad_2002_x30_kb.jpg" />
+   <td>
+     <img width=250 src="thinkpad_2002_x30_kb.jpg" />
      <div class="caption">x30 (2002)</div>
   <tr>
-   <td align=center height=45% width=30%>
-     <img src="thinkpad_2006_z61m.jpg" />
+   <td>
+     <img width=250 src="thinkpad_2006_z61m.jpg" />
      <div class="caption">z61m (2006)</div>
-   <td align=center height=45% width=30%>
-     <img src="thinkpad_2007_x61_kb.jpg" />
+   <td>
+     <img width=250 src="thinkpad_2007_x61_kb.jpg" />
      <div class="caption">x61 (2007)</div>
-   <td align=center height=45% width=30%>
-     <img src="thinkpad_2011_x220_kb.jpg" />
+   <td>
+     <img width=250 src="thinkpad_2011_x220_kb.jpg" />
      <div class="caption">x220 (2011)</div>
  </table>
- <div class="notes">
+???
 - I like to type, I do it all day
 - Touch-typing is a muscle memory
 - Yes, there are differences with all these, but relatively small ones
 - mention what I think the key features are FIXME
 - note the wedge shaped "non-island" keys, and the high travel
- </div>
-</section>
+
+---
 
 <!-- - one slide with every keyboard x230 and newer -->
-<section class="slide">
+
  <h2>Thinkpad Keyboards - "modern"</h2>
-    <!-- FIXME:
-        same as previous slide
-    -->
- <table width=100%>
+ <table>
   <tr>
-   <td align=center height=45% width=30%>
-    <img src="thinkpad_2012_x230_kb.jpg">
+   <td>
+    <img width=250 src="thinkpad_2012_x230_kb.jpg">
     <div class="caption">x230 (2012)</div>
-   <td align=center height=45% width=30%>
-    <img src="thinkpad_2013_x240_kb.jpg">
+   <td>
+    <img width=250 src="thinkpad_2013_x240_kb.jpg">
     <div class="caption">x240 (2013)</div>
-   <td align=center height=45% width=30%>
-    <img src="thinkpad_2014_x1g2.jpg">
+   <td>
+    <img width=250 src="thinkpad_2014_x1g2.jpg">
     <div class="caption">x1 gen2 (2014)</div>
   <tr>
-   <td align=center height=45% width=30%>
-    <img src="thinkpad_2015_x250.jpg">
+   <td>
+    <img width=250 src="thinkpad_2015_x250.jpg">
     <div class="caption">x250 (2015)</div>
-   <td align=center height=45% width=30%>
-    <img src="thinkpad_2015_x1g3.jpg">
+   <td>
+    <img width=250 src="thinkpad_2015_x1g3.jpg">
     <div class="caption">x1 gen3 (2015)</div>
-   <td align=center height=45% width=30%>
-    <img src="thinkpad_2016_x260_kb.jpg">
+   <td>
+    <img width=250 src="thinkpad_2016_x260_kb.jpg">
     <div class="caption">x260 (2016)</div>
  </table>
- <div class="notes">
+???
 - Changing keyboards is going to happen, but I need to use many
 - Dont remove keys!
 - note the x240, x250 and x260 are apparently physically interchangable
 - point out the x1 g2 as presaging the new mac keyboard by a couple of years
 - point out the other bonkers keys on the x1 g2
- </div>
-</section>
+
+---
 
 <!-- - final slide holding x220 and x230 side-by-side -->
-<section class="slide">
+
  <h2>Keyboards - old and new</h2>
- <table width=100%>
+ <table>
   <tr>
-   <td align=center height=100% width=50%>
-    <img src="thinkpad_2011_x220_kb.jpg">
+   <td>
+    <img width=375 src="thinkpad_2011_x220_kb.jpg">
     <div class="caption">Thinkpad x220</div>
-   <td align=center height=100% width=50%>
-    <img src="thinkpad_2012_x230_kb.jpg">
+   <td>
+    <img width=375 src="thinkpad_2012_x230_kb.jpg">
     <div class="caption">Thinkpad x230</div>
  </table>
- <div class="notes">
+???
 - The newest "classic" keyboard vs the oldest "modern" one
- </div>
-</section>
+
+---
 
 <!-- *** assisted by physical compatibility and ease of replacement -->
-<section class="slide">
+
  <h2>Replacing the x230 keyboard</h2>
  <ul>
   <li class="slide">Connector compatibility
@@ -240,7 +228,7 @@ FIXME
   <li class="slide">None of the Fn-Combos worked properly
   <li class="slide">Could hack the whole keyboard
  </ul>
- <div class="notes">
+???
 TODO
 - add connector photos
 - add burnout photos
@@ -249,25 +237,25 @@ TODO
 - So similar that you can just plug it in.. except for a couple of issue
 - hardware hacking is possible, if laborious
 - seems a bit dirty, really
- </div>
-</section>
+
+---
 
 <!-- * first steps -->
-<section class="slide">
+
  <h2>Its all just software...</h2>
  <ul>
   <li class="slide">Schematics of both laptops show all the keys are there
   <li class="slide">All still connected to the Embedded Controller
   <li class="slide">If this was open source, I'd just update the code
- <div class="notes">
+???
 TODO:
 - add schematic photo
 
- </div>
-</section>
+
+---
 
 <!-- ** download firmware , look for tables , hexdump/search/existing research -->
-<section class="slide">
+
  <h2>... but software sucks</h2>
  <ul>
   <li>download firmware
@@ -275,42 +263,42 @@ TODO:
   <li class="slide">Match the keyboard master tables, and some other data
   <li class="slide">However, the firmware doesnt look 'sane'
   <li class="slide">Still have no way to install my patch
- <div class="notes">
+???
 TODO:
 - add hexdump photo
 - ref old firmware dump
 - add embryonic patch details
 
- </div>
-</section>
+
+---
 
 <!-- * breakthrough -->
-<section class="slide">
+
  <h2>breakthrough in EC firmware</h2>
  <ul>
   <li>See the talk before this one :-) by the mec-tools author
   <li>Assuming some people missed that talk FIXME
  </ul>
- <div class="notes">
+???
 TODO
 - add some mec tools notes
- </div>
-</section>
+
+---
 
 <!-- ** radare2 -->
-<section class="slide">
+
  <h2>Reverse Engineering</h2>
  <ul>
   <li>Use Radare2 (and learn it)
   <li>Has support for the needed ARCompact instuction set
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** improving the radare analysis -->
-<section class="slide">
+
  <h2>FIXME improving the radare analysis</h2>
  <ul>
   <li>Radare2 ARC support was quite flakey
@@ -321,212 +309,210 @@ FIXME - add notes
   <li>Improve illegal instruction detection - massively improving browsing
   <li>In the visual analysis, scrolling backwards ended up going forwards!
  </ul>
- <div class="notes">
+???
 FIXME
 - add notes
 - clarify or reduce the above
 - mention NUXI format used by the little endian instruction coding
- </div>
-</section>
+
+---
 
 <!-- ** looking for structures -->
-<section class="slide">
+
  <h2>FIXME looking for structures</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** chasing pointers -->
-<section class="slide">
+
  <h2>FIXME chasing pointers</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** colaboration -->
-<section class="slide">
+
  <h2>FIXME colaboration</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** initial publish -->
-<section class="slide">
+
  <h2>FIXME initial publish</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- * polishing (the thinkpad-ec project) -->
-<section class="slide">
+
  <h2>FIXME polishing (the project)</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** audience (the people who wanted to try to use that project) -->
-<section class="slide">
+
  <h2>FIXME audience</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** issues with distribution -->
-<section class="slide">
+
  <h2>FIXME issues with distribution</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 - not my binaries, not allowed to distribute
 FIXME - add more notes
- </div>
-</section>
+
+---
 
 <!-- ** supporting more hardware -->
-<section class="slide">
+
  <h2>FIXME supporting more hardware</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- * How does flashing work -->
-<section class="slide">
+
  <h2>FIXME How does flashing work</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** Lenovo tools -->
-<section class="slide">
+
  <h2>FIXME Lenovo tools</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** reversing dosflash -->
-<section class="slide">
+
  <h2>FIXME reversing dosflash</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- *** writing a simple kvm hypervisor -->
-<section class="slide">
+
  <h2>FIXME writing a simple kvm hypervisor</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- *** itterating on implementing missing features -->
-<section class="slide">
+
  <h2>FIXME itterating on implementing missing features</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** writing a device driver for real hardware -->
-<section class="slide">
+
  <h2>FIXME device driver for real hardware</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** how is the firmware protected? is this a risk -->
-<section class="slide">
+
  <h2>FIXME how is the firmware protected?</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- * next steps -->
-<section class="slide">
+
  <h2>FIXME next steps</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** Still want a newer laptop, dont want to spend money without keyboard -->
-<section class="slide">
+
  <h2>FIXME Still want a newer laptop</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
+
+---
 
 <!-- ** build a usb adaptor for the raw keyboard -->
-<section class="slide">
+
  <h2>FIXME build a usb adaptor</h2>
  <ul>
   <li>dot points
  </ul>
- <div class="notes">
+???
 FIXME - add notes
- </div>
-</section>
 
 
 <!--
@@ -545,33 +531,14 @@ reference material:
 
 <!-- End slides. -->
 
-<!-- Begin extension snippets. Add or remove as needed. -->
 
-<!-- deck.status snippet -->
-<p class="deck-status" aria-role="status">
- <span class="deck-status-current"></span>
- /
- <span class="deck-status-total"></span>
-</p>
 
-<!-- End extension snippets. -->
-
-<!-- Required JS files. -->
-<script src="deck/jquery.min.js"></script>
-<script src="deck/core/deck.core.js"></script>
-
-<!-- Extension JS files. Add or remove as needed. -->
-<script src="deck/extensions/menu/deck.menu.js"></script>
-<script src="deck/extensions/status/deck.status.js"></script>
-<script src="deck/extensions/scale/deck.scale.js"></script>
-<script src="deck.console-notes.js/deck.console-notes.js"></script>
-
-<!-- Initialize the deck. You can put this in an external file if desired. -->
-<script>
-  $(function() {
-    $.deck('.slide');
-  });
-</script>
+ </textarea>
+ <script src="remark-latest.min.js">
+ </script>
+ <script>
+  var slideshow = remark.create();
+ </script>
 </body>
 </html>
 

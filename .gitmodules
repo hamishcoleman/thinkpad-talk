@@ -1,6 +1,0 @@
-[submodule "deck"]
-        path = deck
-        url = https://github.com/imakewebthings/deck.js
-[submodule "deck.console-notes.js"]
-	path = deck.console-notes.js
-	url = https://github.com/mikeharris100/deck.console-notes.js
