@@ -67,7 +67,7 @@ LCA2017
 
 ---
 class: center, middle
-![](xkcd_1770.png "XKCD ui_change")
+![xkcd/1770](xkcd_1770.png "XKCD ui_change")
 <div class="caption">https://xkcd.com/1770/</div>
 
 ???
@@ -83,65 +83,132 @@ class: center, middle
 
 - What is wrong with current Laptops?
 
-- Why should we care about that?
-
 - How much can we change this?
 
 - Reversing firmware tables
 
 - Can I make the flash tool work from Linux?
 ???
-FIXME
-- polish the english above
-- make sure it makes sense too..
-- real quick outline
+- There are four main points that I think I can get across
+- Not too much time on what is wrong with the laptops
+- Encourage people to be able to make changes to the hardware around them
+- Actually changing/fixing the firmware
+-- radare patches
+-- trying to hit the target audience for your project
 
 --
  *SPOILER* - No
+
+???
+- Going further with exploration and possible exploitation
+-- Write a KVM-based hypervisor
 
 ---
 
 <!-- ** Why did I do it (what motivated me) -->
 
- <h2>Why did I do it</h2>
- <ul>
-  <li>Increasingly, hardware doesnt seem to meet my requirements
- </ul>
+# Why did I start my fight?
+
+- Today's hardware is just not for me
+
+- To be fair, I'm a small group
+
+- Is it new features at the *expense* of old ones?
+
+- You should feel like you *could* do something about it
+
 ???
+- Increasingly, hardware doesnt seem to meet my requirements
 - evolution of hardware
 - beyond a certain point smaller is not always better
 - I certainly dont want cheaper at the cost of quality
+- touch on open source, helping making changes
 - There is a constant and growing feeling that none of the designs
     are catering for my needs and wants.  This could be because I am
     old and crusty, but the point is that I dont like feeling that way.
     I assume that others have had the same feeling and want to encourage
     you in doing things about it.
+- Note, I say *could* - I dont expect everyone to want to, or to succeed.
 
 ---
 
 <!-- *** laptop evolution -->
 
- <h2>Laptop evolution</h2>
+# Laptop evolution
+
+- Keep getting smaller - this is good
+
+- At the expense of ports, durability, keys - this is bad
+
 ???
--
+- Historically, I have just looked at the Thinkpad laptops
+- Looking at other ranges, I see many of the same things - starting sooner,
+    perhaps
+- Smaller means a lot of things, many of which I can cope with
+- sometimes smaller just means less room for the battery - which is bad
+
 
 ---
 
 <!-- **** my laptop opinions. computers: travel, workstation, other. -->
 
- <h2>My laptop opinions</h2>
+# My ideal laptop
+
+- easily portable
+
+- suitable for all-day use
+ - (all-day battery would be nice)
+
+- Runs Linux
+
+- No blobs
+
+- Actually is a laptop
+
+- Durable
+
 ???
--
+- FIXME I had some idea to talk about the three use cases I saw for laptops
+- Portability speaks to the maximum size - not a portable gaming rig
+  and certainly not large enough to fit a numberpad!
+- all-day use is about erganomics, which - amungst other things - relates
+  to screen quality and since I will be typing all day - the keyboard
+- Beyond (say) 4 hours, battery life is more something nice to have, with
+  the assumption that if I am working all day, I am at probably near a
+  power point for some of that time.  Of course, it has to reliably hit
+  the 4 hour mark.
+- runs linux, should be obvious
+- Even the Purism people have blobs that they were not able to remove from
+  their laptops
+- And the Novena isnt actually a laptop
+- durable - survives being used as a laptop
+
+- I have had a number of laptops that hit almost all of that (over the
+  years), all from the thinkpad lineup - which is why I kept looking at
+  that range.
+- note that price is not on that list
+- can mention the chromebook here, too - as an exception to the pricepoint
 
 ---
 
 <!-- *** scope - reducing it make it possible for me -->
 
- <h2>Scope</h2>
+# Scope
+
+- Washing list of changes I want
+
+- Skills to do only one or two things
+
+- Look at my needs and focus on the important things
+
+- What can I do about the Keyboard on newer laptops?
+
 ???
 - So, now that I have a list of things I dont like, what can I do
 - I'm not bunnie or purism - I cannot build a whole laptop
 - so, reduce the scope to the minimum feature set
+- all the modern laptops I looked at have keyboards I dont want
+- Can I do something about that?
 
 ---
 
@@ -150,7 +217,7 @@ FIXME
         - 701c, 600x, r40, z61m x30, x61t, x220
 -->
 
- <h2>Thinkpad Keyboards - "classic"</h2>
+# Thinkpad Keyboards - "classic"
 
  <table>
   <tr>
@@ -185,7 +252,7 @@ FIXME
 
 <!-- - one slide with every keyboard x230 and newer -->
 
- <h2>Thinkpad Keyboards - "modern"</h2>
+# Thinkpad Keyboards - "modern"
  <table>
   <tr>
    <td>
@@ -219,7 +286,7 @@ FIXME
 
 <!-- - final slide holding x220 and x230 side-by-side -->
 
- <h2>Keyboards - old and new</h2>
+# Keyboards - old and new
  <table>
   <tr>
    <td>
@@ -231,27 +298,59 @@ FIXME
  </table>
 ???
 - The newest "classic" keyboard vs the oldest "modern" one
+- The laptop I wanted to replace is the x220 on the left
 
 ---
 
 <!-- *** assisted by physical compatibility and ease of replacement -->
 
- <h2>Replacing the x230 keyboard</h2>
- <ul>
-  <li class="slide">Connector compatibility
-  <li class="slide">backlight and burnouts
-  <li class="slide">Many of the top keys didnt work
-  <li class="slide">None of the Fn-Combos worked properly
-  <li class="slide">Could hack the whole keyboard
- </ul>
+# Replacing the x230 keyboard
+
+- Keyboard Connector works, Layout is different
+
+- Others have solved this...
+
+.center.middle[![rewired2](keyboard_rewired2.jpg "Rewired Keyboard")]
+<div class=caption>http://forum.thinkpads.com/viewtopic.php?f=69&t=104889#p718202</div>
+
+???
+- So similar that you can just plug it in.. except for a couple of issue
+- hardware hacking is possible, if somewhat laborious
+
+---
+
+# Replacing the x230 keyboard
+
+- Backlight and Burnouts
+
+<img width=750 src="keyboard_short.jpg">
+
+???
+- I didnt notice this until much later
+- all the keyboards I tried this with had had the same thing happen
+- it turns out that there is a different pinout, and they used it for the
+  high current backlight.
+
+---
+class: center, middle
+<img width=750 src="keyboard_short2.jpg">
+Not easy to see..
+
+???
+- Someone else pointed this out
+- I didnt believe them until I found this small mark
+
+---
+
+# Replacing the x230 keyboard
+
+
+- Many of the top keys didnt work
+- None of the Fn-Combos worked properly
 ???
 TODO
-- add connector photos
-- add burnout photos
-- add photos of rewired keyboard
+- add connector photos?
 
-- So similar that you can just plug it in.. except for a couple of issue
-- hardware hacking is possible, if laborious
 - seems a bit dirty, really
 
 ---
