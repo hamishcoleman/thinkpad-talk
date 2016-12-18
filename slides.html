@@ -37,13 +37,14 @@ class: center, middle
 <!-- * Introduction -->
 # My fight with modern laptops
 LCA2017
-.footnote[Hamish Coleman hamish@zot.org]
+.footnote[Hamish Coleman - hamish@zot.org]
 
 ???
-- Hi
 - questions, please raise your hand and I will stop shortly
 - slides available, etc
 - I'll show any urls again at the end, too
+
+FIXME - put the talk name as a header on all slides??
 
 ---
 
@@ -60,10 +61,17 @@ LCA2017
 - ... but I want be 'constructive' about it
 
 ???
+- The description says I live in Melbourne, but these days I live in a small
+  box in Hong Kong
+- I dont work for Lenovo (or IBM) - I never have - I was just a fan of their
+  hardware
 - You might call it Dev Ops these days
   I've been calling it Sys Admin for years
 - Dissassembling things, finding out how things work, this is all part of the
-  same thing for me.  Sometimes I even put them back together
+  same thing for me.
+- Sometimes I even put them back together
+- it seems this is the room for grumpy old men who dont like their laptops
+  this morning..
 
 ---
 class: center, middle
@@ -75,23 +83,29 @@ class: center, middle
 - .. But - concerned about the pattern that the computer/design industry
   is taking (cheapening and mass-producing/lowest-common-denominatoring)
 
+NOTE: be aware of the timing needed to read the comic - say min 20sec
+
 ---
 
 <!-- ** What is in this talk -->
 
-# What is in this talk
+# This talk
 
 - What is wrong with current Laptops?
 
-- How much can we change this?
+- Investigate the hardware, how much can I change it?
 
 - Reversing firmware tables
 
 - Can I make the flash tool work from Linux?
 ???
+TODO: these set of notes dont give me hints on what to say (yet)
+
 - There are four main points that I think I can get across
 - Not too much time on what is wrong with the laptops
 - Encourage people to be able to make changes to the hardware around them
+- get people back into the mentality of questioning their 'perfect', 'shiny'
+  new toys - "what can I change??"
 - Actually changing/fixing the firmware
 -- radare patches
 -- trying to hit the target audience for your project
@@ -99,7 +113,11 @@ class: center, middle
 --
  *SPOILER* - No
 
+- What next? FIXME - another idea from audrey
+
 ???
+TODO: these set of notes dont give me hints on what to say (yet)
+
 - Going further with exploration and possible exploitation
 -- Write a KVM-based hypervisor
 
@@ -129,6 +147,9 @@ class: center, middle
     I assume that others have had the same feeling and want to encourage
     you in doing things about it.
 - Note, I say *could* - I dont expect everyone to want to, or to succeed.
+
+- could do a quick room survey and note the number of thinkpads diminishing
+  over the years
 
 ---
 
@@ -179,7 +200,7 @@ class: center, middle
   the 4 hour mark.
 - runs linux, should be obvious
 - Even the Purism people have blobs that they were not able to remove from
-  their laptops
+  their laptops (eg: M.E. blob)
 - And the Novena isnt actually a laptop
 - durable - survives being used as a laptop
 
@@ -187,7 +208,9 @@ class: center, middle
   years), all from the thinkpad lineup - which is why I kept looking at
   that range.
 - note that price is not on that list
-- can mention the chromebook here, too - as an exception to the pricepoint
+
+- maybe can mention the chromebook here, too - as an exception to the
+  pricepoint (if so, be sure to debian "not chromeos")
 
 ---
 
@@ -201,14 +224,14 @@ class: center, middle
 
 - Look at my needs and focus on the important things
 
-- What can I do about the Keyboard on newer laptops?
+- What could I do about the Keyboard on newer laptops?
 
 ???
 - So, now that I have a list of things I dont like, what can I do
 - I'm not bunnie or purism - I cannot build a whole laptop
 - so, reduce the scope to the minimum feature set
 - all the modern laptops I looked at have keyboards I dont want
-- Can I do something about that?
+- Could I do something about that?
 
 ---
 
@@ -321,7 +344,6 @@ class: center, middle
 ???
 - So similar that you can just plug it in.. except for a couple of issue
 
-- TODO - add pictures of the keyboard connector?
 ---
 
 # Replacing the x230 keyboard
@@ -333,8 +355,10 @@ class: center, middle
 ???
 - I didnt notice this until much later
 - all the keyboards I tried this with had had the same thing happen
-- it turns out that there is a slightly different pinout, and they used
-  it for the high current backlight.
+- it turns out that there is a slightly different pinout, and they sent
+  the high current backlight though the connector.
+- Someone else pointed this out
+- The Schematics I have are unclear
 
 ---
 class: center, middle
@@ -342,12 +366,11 @@ class: center, middle
 Not easy to see..
 
 ???
-- Someone else pointed this out
-- The Schematics I have are unclear
 - I didnt believe them until I found this small mark
 - Apparently, I was lucky - other people have had the burnout break
   the mouse buttons
-- There is a insulating tape hack that can be applied
+- There is a insulating tape hack that can be applied to stop this
+  from happening
 
 ---
 
@@ -451,9 +474,21 @@ TODO:
   <li>See the talk before this one :-) by the mec-tools author
   <li>Assuming some people missed that talk FIXME
  </ul>
+- decrypt
+- patch
+- reencrypt + checksum
+- successfully flash the new version
+
 ???
 TODO
 - add some mec tools notes
+
+- Assuming you missed his talk, he worked out how to decrypt his thinkpad
+  Embedded Controller firmware, patch it, re-encrypt it and add the
+  right checksums to let it be successfully flashed
+
+- If zmatt's talk didnt exist, I would have explained how the lenovo firmware
+  encryption worked at this point
 
 ---
 
@@ -688,6 +723,22 @@ FIXME - add notes
 ???
 FIXME - add notes
 
+---
+
+# FIXME - what do you want to do
+
+???
+TODO:
+- encourage people to discuss what they want to change on their laptop
+- ask audrey for more ideas if needed on this slide :-)
+
+---
+
+# FIN
+
+FIXME
+- add lots of URLs here
+- Tools summary
 
 <!--
 
