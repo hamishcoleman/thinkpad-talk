@@ -19,6 +19,10 @@
     bottom: 3em;
   }
 
+h1 {
+    margin-top: 0;
+}
+
 img {
     margin-bottom: 0;
 }
@@ -767,7 +771,10 @@ reference material:
  <script src="remark-latest.min.js">
  </script>
  <script>
-  var slideshow = remark.create();
+  var slideshow = remark.create({
+    slideNumberFormat: 'My fight with modern laptops %current%/%total%',
+    countIncrementalSlides: false,
+  });
  </script>
 </body>
 </html>
