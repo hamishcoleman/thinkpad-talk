@@ -443,49 +443,54 @@ TODO - replace the x230 keyboard image with a better one
 
 # ... but software sucks
 
-- If this was open source, I'd just update the code
+<ul>
+ <li><p>Dissassembled firmware from 10 years ago exists (http://ec.gnost.info/)
+ <li><p>This can be used as a partial oracle
+</ul>
+<img width=750 src="firmware_gnost.png">
+<div class="caption">T43 ec.s (viewed in less)</div>
+<img width=750 src="firmware_hd_x220.png">
+<div class="caption">x220 EC firmware (viewed in HT Editor)</div>
+<img width=750 src="firmware_hd_x230.png">
+<div class="caption">x230 EC firmware (viewed in HT Editor)</div>
 
-- Found assembly dump for much older Thinkpad (http://ec.gnost.info/)
-
-DIG HERE
-
- <ul>
-  <li>download firmware
-  <li class="slide">Find some existing code dumps
-  <li class="slide">Match the keyboard master tables, and some other data
-  <li class="slide">However, the firmware doesnt look 'sane'
-  <li class="slide">Still have no way to install my patch
 ???
+- If this was open source, I'd just update the code
 - Found this assembly dump quite some time ago
-- It is for T4x and R5x laptops
-
-TODO:
-- add hexdump photo
-- ref old firmware dump
-- add embryonic patch details
-
+- - It is for T4x and R5x laptops (T43 was from 2005)
+- I can use the T43 dump as an Oracle to make predictions about what the
+  key table might look like in the X220 and X230
+- Match the keyboard master tables, and some other small bits
+- Allows the beginnings of a firmware patch
+- However, the x230 firmware doesnt look 'sane' (E.G: The Jump Tables are wierd)
+- Still have no way to install my patch
 
 ---
 
 <!-- * breakthrough -->
 
- <h2>breakthrough in EC firmware</h2>
- <ul>
-  <li>See the talk before this one :-) by the mec-tools author
-  <li>Assuming some people missed that talk FIXME
- </ul>
-- decrypt
-- patch
-- reencrypt + checksum
-- successfully flash the new version
+# Breakthrough in EC firmware
+
+- Matthew Chapman blogs about Battery Hacking
+
+  (See the talk before this one :-)
+
+mec-tools:
+- works with Thinkpad x230 EC Firmware
+
+- decrypt/encrypts
+
+- recalculates checksums
 
 ???
-TODO
-- add some mec tools notes
+- compliment Matthew on his talk, thank him for his software
+- mention anything from his talk that seems relevant
 
 - Assuming you missed his talk, he worked out how to decrypt his thinkpad
   Embedded Controller firmware, patch it, re-encrypt it and add the
   right checksums to let it be successfully flashed
+
+- with mec tools, we can patch and successfully flash the new version
 
 - If zmatt's talk didnt exist, I would have explained how the lenovo firmware
   encryption worked at this point
