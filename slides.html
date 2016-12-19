@@ -504,33 +504,60 @@ mec-tools:
 
 <!-- ** radare2 -->
 
- <h2>Reverse Engineering</h2>
- <ul>
-  <li>Use Radare2 (and learn it)
-  <li>Has support for the needed ARCompact instuction set
- </ul>
+# More Reverse Engineering
+
+- Simply patching keyLocTab doesnt fully work
+
+- The Radare2 tool had support for the ARCompact instruction set
+
+<img width=750 src="firmware_radare1.png">
+<div class="caption">Radare2 excerpt... looks wrong</div>
+
 ???
-FIXME - add notes
+- With the ability to now patch the EC, I could try out simply updating
+  the keysym table I found with the olf T43 firware.
+- That had some success, remapping working keys.  The dead keys didnt come
+  back to life though
+- Searched around for something that supported the right CPU, found Radare2
+- Its got a bit of a learning curve...
+- This screenshot might not make sense to you, but I tell you that it doesnt
+  make sense to me either
+- Radare didnt actually support the ARC cpu very well.
 
 ---
 
 <!-- ** improving the radare analysis -->
 
- <h2>FIXME improving the radare analysis</h2>
- <ul>
-  <li>Radare2 ARC support was quite flakey
-  <li>Worse, the ARCompact support appeared to be half missing
-  <li>What was there was big endian only
-  <li>no jump delay slot handling made most tracing difficult
-  <li>jumps and branches were not analysed, either
-  <li>Improve illegal instruction detection - massively improving browsing
-  <li>In the visual analysis, scrolling backwards ended up going forwards!
- </ul>
+# Radare needed improvement
+
+- Radare2 ARC support actually quite flakey
+
+- E.G: scrolling backwards ended up going forwards!
+
+- Worse, the ARCompact support appeared to be half missing
+
+- big endian only, no jump delay slot, jumps targets all wrong, no
+  illegal instruction detection
+
 ???
-FIXME
-- add notes
 - clarify or reduce the above
-- mention NUXI format used by the little endian instruction coding
+- maybe mention NUXI format used by the little endian instruction coding
+- Even with all that mentioned, there are still a lot of things missing
+  from this architecture in radare
+
+---
+
+# Improvements helped
+
+- better analysis, can go back to looking for data tables
+
+- TODO spacer
+
+<img width=750 src="firmware_radare2.png">
+<div class="caption">improved Radare2 excerpt</div>
+
+???
+FIXME - add more?
 
 ---
 
@@ -542,7 +569,7 @@ FIXME
  </ul>
 ???
 FIXME - add notes
-
+- with better analysis, go back to looking for more
 ---
 
 <!-- ** chasing pointers -->
