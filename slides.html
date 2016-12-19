@@ -772,7 +772,13 @@ reference material:
  </script>
  <script>
   var slideshow = remark.create({
-    slideNumberFormat: 'My fight with modern laptops %current%/%total%',
+    slideNumberFormat: function (current, total) {
+      s = current + '/' + total;
+      if (current>1) {
+        s = 'My fight with modern laptops ' + s;
+      }
+      return s;
+    }
   });
  </script>
 </body>
