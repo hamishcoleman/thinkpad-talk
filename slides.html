@@ -511,7 +511,7 @@ mec-tools:
 - The Radare2 tool had support for the ARCompact instruction set
 
 <img width=750 src="firmware_radare1.png">
-<div class="caption">Radare2 excerpt... looks wrong</div>
+<div class="caption">firmare excerpt - before fixing Radare2</div>
 
 ???
 - With the ability to now patch the EC, I could try out simply updating
@@ -538,9 +538,14 @@ mec-tools:
 
 - big endian only, no jump delay slot, jumps targets all wrong, no
   illegal instruction detection
+.center[<img width=500 src="radare_patch1.png">]
+
 
 ???
 - clarify or reduce the above
+- some may call this yak shaving
+- This is part of what I am trying to encourage - there was a problem with
+  the tool, I fixed the tool
 - maybe mention NUXI format used by the little endian instruction coding
 - Even with all that mentioned, there are still a lot of things missing
   from this architecture in radare
@@ -554,7 +559,7 @@ mec-tools:
 - TODO spacer
 
 <img width=750 src="firmware_radare2.png">
-<div class="caption">improved Radare2 excerpt</div>
+<div class="caption">same excerpt - after Radare2 fixes</div>
 
 ???
 FIXME - add more?
