@@ -1,6 +1,6 @@
 #
 # After editing, regenerate the output file with
-#       dot -Tsvg -O structure.dot
+#       dot -Tsvg -O structure1.dot
 #
 
 digraph structs {

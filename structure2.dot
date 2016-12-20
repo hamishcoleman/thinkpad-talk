@@ -1,0 +1,35 @@
+#
+# After editing, regenerate the output file with
+#       dot -Tsvg -O structure2.dot
+#
+
+digraph structs {
+    rankdir=LR;
+    node [shape=record];
+
+    table_00021510 [label="table.00021510: |... |<p1>fn_key_complex |<p2>numpad |<p3>keysym_stuff |..."];
+    table_ptr_fn_key_complex_stuff [label="<p0>fn_key_complex: | { 0x8 | <p1>jump_table.0x0002164c } | { 0x1b | <p2>fn_key_map1 }"];
+    table_numpad [label="<p0>numpad? |{0xb2 |table.000216b4} |0x40 |table_numpad2 |table_numpad1 |{0xb |<p4>replacements}"];
+    table_ptr_keysym_stuff [label="keysym_stuff: |{ 0x110 |<p1> table_keysym} |<p2> table_live_key_map |<p3> table.00021a0c"];
+
+    jump_table_0002164c [label="<p0>jump_table | fn_ptr..."];
+
+    fn_key_map1 [label="{<p0>fn|keysym}|{0xc0|F3}|{0xc7|F4}|..."];
+
+    table_keysym [label="<p0>keysym array ..."];
+
+    table_live_key_map [label="bitmap ..."];
+
+    table_replacements [label="{<p0>fn |keysym |meta}|{'B'|BREAK|0x2}|{'S'|SYSRQ|0x0}|..."];
+    table_numpad:p4 -> table_replacements:p0;
+    table_00021510:p1 -> table_ptr_fn_key_complex_stuff:p0;
+    table_00021510:p2 -> table_numpad:p0;
+    table_00021510:p3 -> table_ptr_keysym_stuff;
+
+    table_ptr_keysym_stuff:p1 -> table_keysym:p0;
+    table_ptr_keysym_stuff:p2 -> table_live_key_map;
+
+    table_ptr_fn_key_complex_stuff:p1 -> jump_table_0002164c:p0;
+
+    table_ptr_fn_key_complex_stuff:p2 -> fn_key_map1:p0;
+}
