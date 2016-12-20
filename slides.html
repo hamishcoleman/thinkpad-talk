@@ -621,41 +621,50 @@ FIXME - add more here
 - People are not really following
 
 ???
-FIXME - add notes
+FIXME
+- add notes
+- add more to this slide?
 - add links
 
 ---
 
 <!-- * polishing (the thinkpad-ec project) -->
 
- <h2>FIXME polishing (the project)</h2>
- <ul>
-  <li>dot points
- </ul>
-???
-FIXME - add notes
+# Polishing (the project)
 
----
+- Collect all the patches into a repo
 
-<!-- ** audience (the people who wanted to try to use that project) -->
+- Start writing installation documentation
 
- <h2>FIXME audience</h2>
- <ul>
-  <li>dot points
- </ul>
+- Discover what my audience actually is
+
+- Re-write the install docs
+
+- Try to make the process as streamlined as possible
+
 ???
 FIXME - add notes
 
 "This can be a common plague of free software: alienating people through documentation that doesn't relate to those with less knowledge and experience"
  https://hackaday.com/2016/12/16/installing-libreboot/
+<!-- ** audience (the people who wanted to try to use that project) -->
+
 ---
 
 <!-- ** issues with distribution -->
 
- <h2>FIXME issues with distribution</h2>
- <ul>
-  <li>dot points
- </ul>
+# Issues with distribution
+
+- What is the copyright on the firmware?
+
+- Just how much can I copy out without issues
+
+- How to make it easy, without infringing
+
+- What tools are even available?
+
+  - on Windows?
+
 ???
 - not my binaries, not allowed to distribute
 FIXME - add more notes
@@ -664,32 +673,38 @@ FIXME - add more notes
 
 <!-- ** supporting more hardware -->
 
- <h2>FIXME supporting more hardware</h2>
- <ul>
-  <li>dot points
- </ul>
-???
-FIXME - add notes
+# Supporting more hardware
 
----
+- Originally, just expected x230
 
-<!-- * How does flashing work -->
+- Forum requests kept on appearing
 
- <h2>FIXME How does flashing work</h2>
- <ul>
-  <li>dot points
- </ul>
+- Everyone had their own pet model
+
+- In the end, support 7 different models
+
+- Repo structure was assuming just one
+
 ???
 FIXME - add notes
 
 ---
 
 <!-- ** Lenovo tools -->
+<!-- * How does flashing work -->
 
- <h2>FIXME Lenovo tools</h2>
- <ul>
-  <li>dot points
- </ul>
+# Lenovo tools
+
+- Lenovo has a Windows tool, I didnt look at it
+
+- Bootable CD's have "dosflash.exe"
+
+- Boot to PC-DOS, no drivers, clean config
+
+- Runs dosflash
+
+  - loads firmware, *magic happens*
+
 ???
 FIXME - add notes
 
@@ -697,12 +712,23 @@ FIXME - add notes
 
 <!-- ** reversing dosflash -->
 
- <h2>FIXME reversing dosflash</h2>
- <ul>
-  <li>dot points
- </ul>
+# Reversing dosflash
+
+- Need to have a DOS strace tool
+
+- Look at binary, djgpp CWSDPMI
+
+- Have source for djgpp
+
+- can unpack the flat 32bit bin
+
+- Still no tracing, though
+
 ???
 FIXME - add notes
+- mention my old dos tracer
+- TODO link to lwn
+- djgpp?
 
 ---
 
