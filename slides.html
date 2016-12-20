@@ -554,59 +554,71 @@ mec-tools:
 
 # Improvements helped
 
-- better analysis, can go back to looking for data tables
+- Not all features added to Radare
 
-- TODO spacer
+- However, better enough that analysis was usuable
 
 <img width=750 src="firmware_radare2.png">
 <div class="caption">same excerpt - after Radare2 fixes</div>
 
 ???
 FIXME - add more?
+- with better analysis, can go back to looking for more structures
 
 ---
 
 <!-- ** looking for structures -->
 
- <h2>FIXME looking for structures</h2>
- <ul>
-  <li>dot points
- </ul>
-???
-FIXME - add notes
-- with better analysis, go back to looking for more
----
+# looking for structures
 
-<!-- ** chasing pointers -->
+- EC Firmware has a large data section
 
- <h2>FIXME chasing pointers</h2>
- <ul>
-  <li>dot points
- </ul>
+- Data turns out to be a large number of lists of lists
+
+.center[<img width=750 src="structure.dot.svg">]
+
+
 ???
-FIXME - add notes
+- no code beyond table.00020edc FIXME
+- staring at the data
+- seeing things that looked like pointers
+- following the pointers and seeing that they pointed at things
+- Size often added, but "element size", not byte size
+TODO - above feels unclear
 
 ---
 
 <!-- ** colaboration -->
 
- <h2>FIXME colaboration</h2>
- <ul>
-  <li>dot points
- </ul>
+# Colaboration
+
+- Connect with Nitrocaster
+
+- He points me at the 'live key map'
+
+- Together, we find the structure for "both" kinds of Fn+Combo key maps
+
 ???
-FIXME - add notes
+- Nitrocaster found me via the mec-tools blog posts and the Novena forum
+- the Dead keys were missing a "1" in the libr_key_map bitmap seen on
+  last slide
+FIXME - add more here
 
 ---
 
 <!-- ** initial publish -->
 
- <h2>FIXME initial publish</h2>
- <ul>
-  <li>dot points
- </ul>
+# Initial publish
+
+- Nitrocaster starts a thread on the thinkpads.com forums
+
+- We try to explain what we have
+
+- People are not really following
+
 ???
 FIXME - add notes
+- add links
 
 ---
 

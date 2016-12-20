@@ -1,0 +1,54 @@
+#
+# After editing, regenerate the output file with
+#       dot -Tsvg -O structure.dot
+#
+
+digraph structs {
+    rankdir=LR;
+    node [shape=record];
+
+    table_00021510 [label="table.00021510: |... |<p1>keysym_stuff |..."];
+    table_ptr_keysym_stuff [label="keysym_stuff: |{ 0x110 |<p1> table_keysym} |<p2> table_live_key_map |<p3> table.00021a0c"];
+#    table_keysym [label="keysym array |{ __ |c0 |c1 |c2 |...}|{r0| ` | 1 | Q |...}|{r1| F1 | 2 | W |...}|{r2| F2 | 3 | E |...}|{...}"];
+    table_keysym [shape=plaintext, label=<
+<table border="0" cellborder="1" cellspacing="0">
+ <tr><td colspan="5">keysym array</td></tr>
+ <tr>
+  <td></td>
+  <td>col 0</td>
+  <td>col 1</td>
+  <td>col 2</td>
+  <td>...</td>
+ </tr>
+ <tr>
+  <td>row 0</td>
+  <td>`</td>
+  <td>1</td>
+  <td>Q</td>
+  <td>...</td>
+ </tr>
+ <tr>
+  <td>row 1</td>
+  <td>F1</td>
+  <td>2</td>
+  <td>W</td>
+  <td>...</td>
+ </tr>
+ <tr>
+  <td>row 2</td>
+  <td>F2</td>
+  <td>3</td>
+  <td>E</td>
+  <td>...</td>
+ </tr>
+ <tr><td colspan="5">...</td></tr>
+</table>
+>];
+    table_live_key_map [label="bitmap |0000 0000 1001 ..."];
+    table_00021a0c [label="dragons | a0 97 00 00"];
+
+    table_00021510:p1 -> table_ptr_keysym_stuff;
+    table_ptr_keysym_stuff:p1 -> table_keysym;
+    table_ptr_keysym_stuff:p2 -> table_live_key_map;
+    table_ptr_keysym_stuff:p3 -> table_00021a0c;
+}
