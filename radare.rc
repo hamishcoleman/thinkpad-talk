@@ -1,0 +1,46 @@
+#
+# Setup environment for radare examples used in talk
+#
+
+e anal.arch = arc
+e anal.cpu = arc
+e asm.arch = arc
+e asm.bits = 16
+e asm.cpu = arc
+
+#1
+# We got 0x218d8 from an earlier hte search for the keytab
+# x 272 @ 0x218d8
+# f keytab 272 @ 0x218d8
+
+#2
+# pxa 272 @ keytab
+
+#3
+# /v keytab
+
+#4
+# pxa @ hit0_0 - 0x10
+
+#5
+# pxr 32 @ hit0_0 - 0x10
+# f list_keytab 16 @ 0x21a10
+# CC "keytab size" @ list_keytab
+# Cd 4 4 @ list_keytab
+
+#6
+# pd 4 @ list_keytab
+# f- hit0_0
+
+#7
+# pxa @ 0x219e8
+# f keytab_bitmap 34 @ 0x219e8
+
+#8
+# pd 4 @ list_keytab
+
+# f list_morekeys 44 @ 0x21510
+# pxr 44 @ list_morekeys
+
+# pxa @ 0x218bc
+# f list_keyreplace 28 @ 0x218bc
