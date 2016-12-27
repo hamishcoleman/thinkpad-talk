@@ -771,45 +771,88 @@ FIXME - add notes
 
 <!-- *** writing a simple kvm hypervisor -->
 
- <h2>FIXME writing a simple kvm hypervisor</h2>
- <ul>
-  <li>dot points
- </ul>
+# My kvm hypervisor
+
+- "Using the KVM API" - https://lwn.net/Articles/658511/
+
+- CWSDPMI interrupt calls
+
+- DOS interrupt calls
+
+- BIOS interrupt calls
+
+- Ralf Brown Interrupt List - still the best resource
+
 ???
 FIXME - add notes
+
+- the Interrupt List has been a resource for a /long/ time
+
+TODO - add a screenshot?
+FIXME - make it clear that creating a KVM hypervisor is straight forward
 
 ---
 
 <!-- *** itterating on implementing missing features -->
 
- <h2>FIXME iterating on implementing missing features</h2>
- <ul>
-  <li>dot points
- </ul>
+# iterating on implementing missing features
+FIXME
+
+- Trace DOSFLASH.EXE
+
+- Add missing featues (ACPI..)
+
+- Find the SMI
+
+- Document Protocol
+
 ???
-FIXME - add notes
+- Once the basic stuff is up and running, can use the tracing and debug
+  output to show me what the dosflash.exe is doing
+- Wrote a minimal 'fake' ACPI bios that passes all the tests that
+  DOSFLASH.EXE does
+- Once that was right, could find the SMI calls
+- Briefly explain SMI
+- Try to document the protocol
+- Mention that this is so far a dead end.
 
 ---
 
 <!-- ** writing a device driver for real hardware -->
 
- <h2>FIXME device driver for real hardware</h2>
- <ul>
-  <li>dot points
- </ul>
+# device driver for real hardware
+
+- Progress stalled
+
+- need a kernel driver on real hardware
+
+FIXME - add screenshot from protocol trace SMI
+
 ???
+- the emulation is at the point where it needs some answer from the hardware
+  that I am just not giving it
+- So, to get past this, I need to replay some of the protocol on real hardware
+- Have seen the abort sequence, so just need to be careful
+- Needs a kernel driver, because 32bit access (64bit in some places) and direct
+  physical mappings needed.  (Also, I didnt really want to go back to
+  writinf DOS programs)
+
 FIXME - add notes
 
 ---
 
 <!-- ** how is the firmware protected? is this a risk -->
 
- <h2>FIXME how is the firmware protected?</h2>
- <ul>
-  <li>dot points
- </ul>
+# how is the firmware protected?
+
+- x220, x230 - parts encrypted
+
+- x250 - better packing, but looks similar
+
 ???
 FIXME - add notes
+- x220 EC uses a different CPU and different encryption keys
+
 
 ---
 
@@ -857,8 +900,19 @@ TODO:
 
 # FIN
 
-FIXME
+- this talk:
+- github:
+  - https://github.com/hamishcoleman
+    - thinkpad-ec, thinkpad-dosflash, thinkpad-talk
+- http://forum.thinkpads.com/viewtopic.php?f=69&t=104889#p718202
+- http://ec.gnost.info/
+- https://lwn.net/Articles/658511/
+- https://www.cs.cmu.edu/~ralf/files.html
+- mec tools FIXME
+- forum.thinkpads.com publish FIXME
 - add lots of URLs here
+
+FIXME
 - Tools summary
 
 <!--
