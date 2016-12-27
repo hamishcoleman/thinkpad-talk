@@ -342,9 +342,11 @@ FIXME - zoom in on the x1 gen2 Home/End key
    <td>
     <img width=517 src="thinkpad_2011_x220_kb.jpg">
     <div class="caption">Thinkpad x220</div>
+    - FIXME Pro list
    <td>
     <img width=517 src="thinkpad_2012_x230_kb.jpg">
     <div class="caption">Thinkpad x230</div>
+    - FIXME Con list
  </table>
 
 ???
@@ -505,12 +507,12 @@ TODO - replace the x230 keyboard image with a better one
 
   (See the talk before this one :-)
 
-mec-tools:
+His mec-tools software:
 - works with Thinkpad x230 EC Firmware
 
 - decrypt/encrypts
 
-- recalculates checksums
+- recalculates the checksums
 
 ???
 - compliment Matthew on his talk, thank him for his software
@@ -525,6 +527,9 @@ mec-tools:
 - If zmatt's talk didnt exist, I would have explained how the lenovo firmware
   encryption worked at this point
 
+- FIXME - example of open source community, he did something, I can use it to
+  do something different and bigger (standing on the shoulders of giants..)
+
 ---
 
 <!-- ** radare2 -->
@@ -537,7 +542,7 @@ mec-tools:
 
 .center[
 <img width=750 src="firmware_radare1.png">
-<div class="caption">firmare excerpt - before fixing Radare2</div>
+<div class="caption">firmware excerpt - before fixing Radare2</div>
 ]
 
 ???
@@ -563,27 +568,32 @@ mec-tools:
 
 - Worse, the ARCompact support appeared to be half missing
 
-- big endian only, no jump delay slot, jumps targets all wrong, no
+- Big endian only, no jump delay slot, jumps targets all wrong, no
   illegal instruction detection
 .right[<img width=500 src="radare_patch1.png">]
 
 
 ???
-- clarify or reduce the above
+- FIXME clarify or reduce the above
+- In order to successfully dig into the firmware, I need to improve the tools
 - some may call this yak shaving
 - This is part of what I am trying to encourage - there was a problem with
   the tool, I fixed the tool
 - maybe mention NUXI format used by the little endian instruction coding
 - Even with all that mentioned, there are still a lot of things missing
   from this architecture in radare
-
+- I did not implement all the radare features in this plugin - not by a
+  long shot (some conditional branching, all "ESIL" stuff, stack frames
+  and more - I'm sure)
+- (also following the theme of picking up open source and improving it.)
 ---
 
 # Improvements helped
 
-- Not all features added to Radare
+- Plenty of features still to add
 
-- However, better enough that analysis was usuable
+- Improved enough that analysis was usable
+
 
 .center[
 <img width=750 src="firmware_radare2.png">
@@ -593,12 +603,29 @@ mec-tools:
 ???
 FIXME - add more?
 - with better analysis, can go back to looking for more structures
+- Remember, this is trying to get better analysis to fix the keyboard
+- Note that much of the reverse engineering was code analysis as I looked
+  for things like the capslock GPIO or the interface to the main CPU
+
+---
+
+# Finished Yak-shaving..
+
+- before I was distracted with making tools better
+
+FIXME - add the radare screenshots?
+
+???
+Have digressed from my main points, so try to bring people back
+- yak shaving to fix all the radare stuff and the encryption stuff
+- now back to looking for the keyboard structures
+FIXME - add more?
 
 ---
 
 <!-- ** looking for structures -->
 
-# looking for structures
+# Looking for structures
 
 - EC Firmware has a large data section
 
@@ -608,22 +635,21 @@ FIXME - add more?
 
 
 ???
+- Now that I have shown you some basic radare data tools, we can get back
+  to finding the keyboard patches
 - no code beyond table.00020edc FIXME
 - staring at the data
 - seeing things that looked like pointers
 - following the pointers and seeing that they pointed at things
 - Size often added, but "element size", not byte size
 TODO - above feels unclear
-
 ---
 
 <!-- ** colaboration -->
 
 # Collaboration
 
-- Connect with Nitrocaster
-
-- He points me at the 'live key map'
+- Connect with Nitrocaster - points me at the 'live key bitmap'
 
 - Together, we find the structure for "both" kinds of Fn+Combo key maps
 
@@ -635,16 +661,26 @@ TODO - above feels unclear
 - There were two other structures
 - "Simple" replacements
 - "Complex" calls to functions
+- I have written some Docs on the tables we found in the thinkpad-ec repo
 FIXME - add more here
 
 ---
 
-.center[<img width=1000 src="structure3.dot.svg">]
+.center[<img width=1150 src="structure3.dot.svg">]
 
 ???
 - Data Structures Excerpt
 - Have culled the full diagram to just those things falling out of the
   "keyboard" master table
+
+---
+
+# Success
+
+FIXME - this is where I did my happy dance because I was a grumpy old man
+who defeated the universe
+
+FIXME - add a photo of a x230 + x220 kb (or a photo of successkid?)
 
 ---
 
@@ -680,6 +716,7 @@ FIXME
 
 - Try to make the process as streamlined as possible
 
+FIXME - add a github screenshot?
 ???
 FIXME - add notes
 
@@ -695,9 +732,9 @@ FIXME - add notes
 
 - What is the copyright on the firmware?
 
-- Just how much can I copy out without issues
+- Just how much can I copy out without issues?
 
-- How to make it easy, without infringing
+- How to make it easy, without infringing?
 
 - What tools are even available?
 
@@ -715,16 +752,18 @@ FIXME - add more notes
 
 - Originally, just expected x230
 
-- Forum requests kept on appearing
+- Forum requests kept on appearing (Everyone has their own pet model)
 
-- Everyone had their own pet model
-
-- In the end, support 7 different models
+- In the end, support 7 different models (all of the xx30 series)
 
 - Repo structure was assuming just one
 
+FIXME - could add screenshot from forum "hey can you add support for blah"
 ???
 FIXME - add notes
+- Could support more, but the low-hanging-fruit was everything from the same
+  series as the x230 laptop - the "xx30" series.  I think I ended up supporting
+  every single one from that series... (not intentionally missing one)
 
 ---
 
@@ -733,15 +772,17 @@ FIXME - add notes
 
 # Lenovo tools
 
-- Lenovo has a Windows tool, I didnt look at it
+- Lenovo has a Windows tool, I didn't look at it
 
-- Bootable CD's have "dosflash.exe"
+- Bootable CD contains "dosflash.exe"
 
 - Boot to PC-DOS, no drivers, clean config
 
 - Runs dosflash
 
   - loads firmware, *magic happens*
+
+FIXME - add a screenshot of the lenovo tool?
 
 ???
 FIXME - add notes
@@ -807,6 +848,8 @@ FIXME
 
 - Document Protocol
 
+FIXME - add screenshot of heaps of trace output
+
 ???
 - Once the basic stuff is up and running, can use the tracing and debug
   output to show me what the dosflash.exe is doing
@@ -822,6 +865,7 @@ FIXME
 <!-- ** writing a device driver for real hardware -->
 
 # device driver for real hardware
+FIXME - title
 
 - Progress stalled
 
@@ -940,9 +984,9 @@ reference material:
   var slideshow = remark.create({
     ratio: '16:9',
     slideNumberFormat: function (current, total) {
-      s = current + '/' + total;
+      s = current;
       if (current>1) {
-        s = 'My fight with modern laptops ' + s;
+        s = 'My fight with modern laptops: ' + s;
       }
       return s;
     }
