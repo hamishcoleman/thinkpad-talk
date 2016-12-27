@@ -639,12 +639,13 @@ FIXME - add more here
 
 ---
 
-# Data Structures Excerpt
-
 .center[<img width=1000 src="structure3.dot.svg">]
 
 ???
-FIXME - add notes
+- Data Structures Excerpt
+- Have culled the full diagram to just those things falling out of the
+  "keyboard" master table
+
 ---
 
 <!-- ** initial publish -->
@@ -824,7 +825,7 @@ FIXME
 
 - Progress stalled
 
-- need a kernel driver on real hardware
+- need a kernel driver and real hardware (dangerous)
 
 FIXME - add screenshot from protocol trace SMI
 
@@ -847,46 +848,45 @@ FIXME - add notes
 
 - x220, x230 - parts encrypted
 
-- x250 - better packing, but looks similar
+- x250 - better layout, looks similar encryption
+
+- x260 - no encryption, probably a signature
 
 ???
-FIXME - add notes
 - x220 EC uses a different CPU and different encryption keys
+- x250 has done away with a lot of padding in their flash file
+- x260 has what appears to be a 256bute signature in the file - thus
+  affording better protection than any of the other ones.
 
 
 ---
 
 <!-- * next steps -->
 
- <h2>FIXME next steps</h2>
- <ul>
-  <li>dot points
- </ul>
-???
-FIXME - add notes
+# Next Steps
 
----
+- Continue tracing SMI
+
+- Build a USB keyboard adaptor
+
+- Try to get newer hardware
+
+- Look for alternative laptops (open?)
+
+???
+- I would like to continue discovering how the DOSFLASH tool works.  This
+  would need the change of tools
+- A partially finished USB keyboard circuit exists, which would allow me to
+  try and retrofit any other hardware with this laptop
+- With newer hardware, I could take measurements for cutting the case apart
+  and attempt other invasive actions to force a new keyboard into it
+- Still want a newer laptop..
+- Keeping my eyes open for alternatives that fix other issues, might allow me
+  to feel less forced into the laptop replacement
+- Can mention chrombook+debian and/or cheap intel-based tablets.
 
 <!-- ** Still want a newer laptop, dont want to spend money without keyboard -->
-
- <h2>FIXME Still want a newer laptop</h2>
- <ul>
-  <li>dot points
- </ul>
-???
-FIXME - add notes
-
----
-
 <!-- ** build a usb adaptor for the raw keyboard -->
-
- <h2>FIXME build a usb adaptor</h2>
- <ul>
-  <li>dot points
- </ul>
-???
-FIXME - add notes
-
 ---
 
 # FIXME - what do you want to do
