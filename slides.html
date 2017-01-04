@@ -1167,7 +1167,11 @@ reference material:
   var slideshow = remark.create({
     ratio: '16:9',
     slideNumberFormat: function (current, total) {
-      s = current;
+      if (Date.now() > 1484838000000) {
+          s = current;
+      } else {
+          s = current + '/' + total;
+      }
       if (current>1) {
         s = 'My fight with modern laptops: ' + s;
       }
