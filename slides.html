@@ -674,17 +674,98 @@ FIXME - add more?
 
 ---
 
-# Finished Yak-shaving..
+# Radare is powerful
 
-- before I was distracted with making tools better
+- Improving it helped me learn it
 
-FIXME - add the radare screenshots
+- Used it to return to looking for structures
 
 ???
+- before I was distracted with making tools better
 Have digressed from my main points, so try to bring people back
 - yak shaving to fix all the radare stuff and the encryption stuff
 - now back to looking for the keyboard structures
-FIXME - add more?
+
+---
+
+.center[
+<img width=1024 src="radare1.png">
+<div class="caption">Naming the keytab</div>
+]
+
+???
+- This is the table I found earlier
+- then give it a name
+---
+
+.center[
+<img width=1024 src="radare2.png">
+<div class="caption">Dumping via name</div>
+]
+
+???
+- basically the same view, but showing that the name is visible in the dump
+---
+
+.center[
+<img width=1024 src="radare3.png">
+<div class="caption">Searching for references</div>
+]
+
+???
+- search the image for places that point to the keytab
+---
+
+.center[
+<img width=1024 src="radare4.png">
+<div class="caption">Dumping the found ref</div>
+]
+
+???
+- go a little backwards from the search result and dump
+- stare at this for a bit and guess at structures
+---
+
+.center[
+<img width=1024 src="radare5.png">
+<div class="caption">Different dump format</div>
+]
+
+???
+- Show the dump with a different format, making it more clear
+- Can see a 0x110 - which is the size of the keytab
+- Can see a couple of pointers too
+- name the table
+- add a comment to the size
+---
+
+.center[
+<img width=1024 src="radare6.png">
+<div class="caption">Annotated disassembly</div>
+]
+
+???
+- Show the names and the comments in a dissassembly
+- delete the (now used) search hit marker
+---
+
+.center[
+<img width=1024 src="radare7.png">
+<div class="caption">Following the next pointer</div>
+]
+
+???
+- Follow one of the other pointers
+- Its a bitmap with the same length
+- give it a name
+---
+
+.center[
+<img width=1024 src="radare8.png">
+<div class="caption">Updated the annotation</div>
+]
+
+???
 
 ---
 
