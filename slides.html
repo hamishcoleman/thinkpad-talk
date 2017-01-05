@@ -1125,23 +1125,20 @@ FIXME - quick digression about SMI?
 
 # device driver for real hardware FIXME - title
 
-<table style="margin-top: -21.75px;margin-left: -1.75px;" cellpadding=0>
- <tr valign="top" height="525">
-  <td width="70%">
-   <ul>
-    <li><p>Progress stalled
-    <li><p>need a kernel driver and real hardware (dangerous)
-   </ul>
+- Progress stalled
 
-  <td>
-    <img width=630 src="emu2.png" />
-    <div class="caption">SMI conversation excerpt</div>
-</table>
+- need a kernel driver and real hardware (dangerous)
+
+<div class="center middle">
+ <img width=610 src="hw_x220_mb.jpg" />
+ <div class="caption">x220 motherboard, ready for destructive testing</div>
+</div>
 
 ???
 - the emulation is at the point where it needs some answer from the hardware
   that I am just not giving it
 - So, to get past this, I need to replay some of the protocol on real hardware
+  (the pictured hardware is, unfortunately, the older x220 model)
 - Have seen the abort sequence, so just need to be careful
 - Needs a kernel driver, because 32bit access (64bit in some places) and direct
   physical mappings needed.  (Also, I didnt really want to go back to
