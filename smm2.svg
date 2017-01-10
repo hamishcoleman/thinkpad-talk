@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="smm2.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1308"
+     inkscape:window-height="742"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.07528651"
+       id="path3343"
+       cx="372.85715"
+       cy="306.48398"
+       r="205.84055" />
+    <circle
+       cy="343.85861"
+       cx="372.85715"
+       id="circle3345"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.87446892"
+       r="167.39838" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="335.48248"
+       y="161.65723"
+       id="text3347"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="335.48248"
+         y="161.65723"
+         id="tspan3371">SMM</tspan></text>
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.66148072"
+       id="circle3351"
+       cx="372.85715"
+       cy="384.73718"
+       r="126.6263" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3353"
+       y="236.40643"
+       x="284.09229"
+       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="236.40643"
+         x="284.09229"
+         id="tspan3355"
+         sodipodi:role="line">Hypervisor</tspan></text>
+    <circle
+       cy="436.12738"
+       cx="372.85715"
+       id="circle3357"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.39372408"
+       r="75.370018" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="284.09229"
+       y="341.52277"
+       id="text3359"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="284.09229"
+         y="341.52277"
+         id="tspan3400">Supervisor</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3363"
+       y="439.63123"
+       x="333.14651"
+       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="439.63123"
+         x="333.14651"
+         sodipodi:role="line"
+         id="tspan3367">User</tspan></text>
+    <circle
+       cy="260.93369"
+       cx="372.85715"
+       id="circle3375"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.31261611"
+       r="251.27223" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3377"
+       y="70.556534"
+       x="295.77194"
+       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan3379"
+         y="70.556534"
+         x="295.77194"
+         sodipodi:role="line">Hardware</tspan></text>
+  </g>
+</svg>
