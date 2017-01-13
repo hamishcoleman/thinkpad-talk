@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
+     inkscape:zoom="0.7"
      inkscape:cx="375"
-     inkscape:cy="520"
+     inkscape:cy="754.71347"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,89 +53,89 @@
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.07528651"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.24499381"
        id="path3343"
        cx="372.85715"
-       cy="306.48398"
-       r="205.84055" />
+       cy="340.02032"
+       r="238.32736" />
     <circle
-       cy="343.85861"
+       cy="386.81161"
        cx="372.85715"
        id="circle3345"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.87446892"
-       r="167.39838" />
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.99302757"
+       r="190.09392" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="335.48248"
-       y="161.65723"
+       style="font-style:normal;font-weight:normal;font-size:38.81685638px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="330.8381"
+       y="349.91714"
        id="text3347"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="335.48248"
-         y="161.65723"
+         x="330.8381"
+         y="349.91714"
          id="tspan3371">SMM</tspan></text>
     <circle
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.66148072"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.74680704"
        id="circle3351"
        cx="372.85715"
-       cy="384.73718"
-       r="126.6263" />
+       cy="434.06845"
+       r="142.96017" />
     <text
        sodipodi:linespacing="125%"
        id="text3353"
-       y="236.40643"
-       x="284.09229"
-       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="267.48868"
+       x="270.88333"
+       style="font-style:normal;font-weight:normal;font-size:38.81685638px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         y="236.40643"
-         x="284.09229"
+         y="267.48868"
+         x="270.88333"
          id="tspan3355"
          sodipodi:role="line">Hypervisor</tspan></text>
     <circle
-       cy="436.12738"
+       cy="475.93915"
        cx="372.85715"
        id="circle3357"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.39372408"
-       r="75.370018" />
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.52864969"
+       r="101.19862" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="284.09229"
-       y="341.52277"
+       style="font-style:normal;font-weight:normal;font-size:38.81685638px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="271.38"
+       y="172.68303"
        id="text3359"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="284.09229"
-         y="341.52277"
+         x="271.38"
+         y="172.68303"
          id="tspan3400">Supervisor</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3363"
-       y="439.63123"
-       x="333.14651"
-       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="77.561623"
+       x="328.612"
+       style="font-style:normal;font-weight:normal;font-size:38.81685638px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         y="439.63123"
-         x="333.14651"
+         y="77.561623"
+         x="328.612"
          sodipodi:role="line"
          id="tspan3367">User</tspan></text>
     <circle
-       cy="260.93369"
+       cy="293.27341"
        cx="372.85715"
        id="circle3375"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.31261611"
-       r="251.27223" />
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.48855829"
+       r="284.95261" />
     <text
        sodipodi:linespacing="125%"
        id="text3377"
-       y="70.556534"
-       x="295.77194"
-       style="font-style:normal;font-weight:normal;font-size:32.70282745px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="487.6517"
+       x="278.58118"
+       style="font-style:normal;font-weight:normal;font-size:38.81685638px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan3379"
-         y="70.556534"
-         x="295.77194"
+         y="487.6517"
+         x="278.58118"
          sodipodi:role="line">Hardware</tspan></text>
   </g>
 </svg>
