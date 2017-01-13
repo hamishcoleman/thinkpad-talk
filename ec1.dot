@@ -1,0 +1,22 @@
+#
+# After editing, regenerate the output file with
+#       dot -Tsvg -O ec1.dot
+#
+
+graph structs {
+    rankdir=LR;
+    node [shape=record];
+
+    EC [ color="red" ];
+
+    CPU -- RAM [constraint=false];
+    CPU -- Southbridge [label="Hypertransport"];
+    Southbridge -- EC [label="LPC"];
+    Southbridge -- SSD [label="SATA"];
+    EC -- Battery [label="I2C"];
+    EC -- Keyboard;
+    EC -- Trackpoint;
+
+    {rank=same Southbridge SSD}
+    {rank=same CPU RAM}
+}
