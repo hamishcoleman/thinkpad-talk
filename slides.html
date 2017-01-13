@@ -98,6 +98,10 @@ img {
 </head>
 <body>
  <textarea id="source">
+background-size: contain
+background-image: url(My_personal_fight_against_the_modern_laptop.png)
+
+---
 class: center, middle
 
 <!-- * Introduction -->
@@ -1339,10 +1343,14 @@ class: center, middle
       } else {
           s = current + '/' + total;
       }
-      if (current>1) {
+
+      if (current>2) {
         s = 'My fight with modern laptops: ' + s;
       }
-      return s;
+      if (current>1) {
+        return s;
+      }
+      return '';
     }
   });
  </script>
