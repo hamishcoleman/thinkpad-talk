@@ -64,7 +64,7 @@
 <!-- CPU&#45;&#45;Southbridge -->
 <g id="edge4" class="edge"><title>CPU&#45;&#45;Southbridge</title>
 <path fill="none" stroke="black" d="M54.4183,-90C89.7802,-90 151.975,-90 196.11,-90"/>
-<text text-anchor="middle" x="125" y="-94.4" font-family="Times Roman,serif" font-size="14.00">Hypertransport</text>
+<text text-anchor="middle" x="125" y="-94.4" font-family="Times Roman,serif" font-size="14.00">High speed bus</text>
 </g>
 <!-- Southbridge&#45;&#45;EC -->
 <g id="edge6" class="edge"><title>Southbridge&#45;&#45;EC</title>
