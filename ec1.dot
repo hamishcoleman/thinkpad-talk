@@ -10,7 +10,7 @@ graph structs {
     EC [ color="red" ];
 
     CPU -- RAM [constraint=false];
-    CPU -- Southbridge [label="Hypertransport"];
+    CPU -- Southbridge [label="High speed bus"];
     Southbridge -- EC [label="LPC"];
     Southbridge -- SSD [label="SATA"];
     EC -- Battery [label="I2C"];
