@@ -112,9 +112,9 @@ LCA2017
 .footnote[Hamish Coleman - hamish@zot.org]
 
 ???
-- questions, please can you wait til the end .. ?
-- slides available, etc
-- I'll show any urls again at the end, too
+- Thanks for coming
+- If you have questions, can you keep them until the end
+- The slides will be available online after the talk
 
 ---
 
@@ -135,9 +135,9 @@ LCA2017
 
 ???
 
-- The description says I live in Melbourne, but these days I live in a small
+- my profile says I'm in Melbourne, but these days I live in a small
   box in Hong Kong
-- You might call it Dev Ops these days
+- You might call it Dev Ops these days.
   I've been calling it Sys Admin for years
 - Disassembling things, finding out how things work, this is all part of the
   same thing for me.
@@ -162,17 +162,12 @@ LCA2017
 - What can we do next?
 
 ???
-TODO: these set of notes dont give me hints on what to say (yet)
 
-- There are four main points that I think I can get across
-- Encourage people to be able to make changes to the hardware around them
-- get people back into the mentality of questioning their 'perfect', 'shiny'
-  new toys - "what can I change??"
-- Actually changing/fixing the firmware
-- firmware flashing includes
-  - Going further with exploration and possible exploitation
-  - Write a KVM-based hypervisor
-- What Next
+- This is what is in this talk
+- I also want to Encourage people to be able to make changes to the
+  hardware around them
+- and get people back into the mentality of questioning their 'perfect',
+  'shiny' new toys - asking "what can I change??"
 
 ---
 class: middle
@@ -197,17 +192,12 @@ class: middle
 
 ???
 - Increasingly, hardware doesnt seem to meet my requirements
-- evolution of hardware
-- beyond a certain point smaller is not always better (thinner means less room
-  for ports and less keyboard travel)
 - I certainly dont want cheaper at the cost of quality
-- touch on open source, helping making changes
-- There is a constant and growing feeling that none of the designs
-    are catering for my needs and wants.  This could be because I am
-    old and crusty, but the point is that I dont like feeling that way.
-    I assume that others have had the same feeling and want to encourage
-    you in doing things about it.
-- Note, I say *could* - I dont expect everyone to want to, or to succeed.
+- I dont like feeling that I an using things that dont suit me.  I assume that
+  others have had the same feeling too, and I want to encourage you to feel
+  like you could do something about that.
+- Note, I say *could* - I dont expect everyone to make changes, or to succeed,
+  just that you feel you could
 
 - could do a quick room survey and note the number of thinkpads diminishing
   over the years
@@ -232,6 +222,8 @@ class: middle
 - Looking at other ranges, I see many of the same things - starting sooner,
     perhaps
 - Smaller means a lot of things, many of which I can cope with
+- beyond a certain point smaller is not always better (thinner means less room
+  for ports and less keyboard travel)
 - I dont want to end up with a laptop with no keyboard!
 ---
 
@@ -253,27 +245,24 @@ class: middle
 - Durable
 
 ???
-- Portability speaks to the maximum size - not a portable gaming rig
-  and certainly not large enough to fit a numberpad!
-- all-day use is about erganomics, which - amungst other things - relates
-  to screen quality and since I will be typing all day - the keyboard
-- sometimes smaller just means less room for the battery - which is bad
+- not a portable gaming rig and certainly not large enough to fit
+  a numberpad!
+- To use it all all-day requires good erganomics, which - amungst other
+  things - relates to screen quality and since I will be typing all day -
+  the keyboard
 - Beyond (say) 4 hours, battery life is more something nice to have, with
   the assumption that if I am working all day, I am at probably near a
   power point for some of that time.  Of course, it has to reliably hit
   the 4 hour mark.
-- runs linux, should be obvious
 - Even the Purism people have blobs that they were not able to remove from
   their laptops (eg: M.E. blob)
 - And the Novena isnt actually a laptop
-- mention pi-top?
 - durable - survives being used as a laptop
 
 - have had a number of thinkpads almost hit all of that (over the
-  years) - this I kept looking at that range.
+  years) - thus I kept looking at that range.
 
 - note that price is not on that list
-- could mention the chromebook here (also "debian", not chromeos)
 
 ---
 
@@ -358,7 +347,6 @@ class: middle
 - Changing keyboards is going to happen, but I would like a choice
 - Dont remove keys!
 - note the x240, x250 and x260 are apparently physically interchangable
-- point out the x1 g2 as presaging the new mac keyboard by a couple of years
 
 ---
 # Some 'strange' design
@@ -372,6 +360,7 @@ class: middle
 
 ???
 - point out the other bonkers keys on the x1 g2
+- point out the x1 g2 as presaging the new mac keyboard by a couple of years
 
 ---
 
@@ -436,7 +425,7 @@ class: middle
 </table>
 
 ???
-- So similar that you can just plug it in.. except for a couple of issue
+- So similar that you can just plug it in.. except for a couple of issues
 
 ---
 
@@ -449,10 +438,9 @@ class: middle
 ???
 - I didnt notice this until much later
 - all the keyboards I tried this with had had the same thing happen
-- it turns out that there is a slightly different pinout, and they sent
-  the high current backlight though the connector.
-- Someone else pointed this out
-- The Schematics I have are unclear
+- it turns out that there is a slightly different pinout, and the design
+  sends the high current backlight though the connector.
+- This needed to be pointed out to me
 
 ---
 class: center, middle
@@ -460,11 +448,11 @@ class: center, middle
 Not easy to see the burn marks
 
 ???
-- I didnt believe them until I found this small mark
+- I didnt believe it, until I found this small mark
 - Apparently, I was lucky - other people have had the burnout break
   the mouse buttons
 - There is a insulating tape hack that can be applied to stop this
-  from happening
+  from happening (details on thinkwiki, linked from repo README)
 
 ---
 
@@ -487,7 +475,6 @@ Not easy to see the burn marks
 
 
 ???
-TODO
 
 - So, connectors and burnouts delt with, can I just use the keyboard? no..
 - Seven-row vs Six-row keyboard
@@ -501,7 +488,6 @@ TODO
 
 - seems a bit half-arsed, really
 
-TODO - replace the x230 keyboard image with a better one
 
 ---
 
@@ -613,9 +599,6 @@ class: middle
 
 - with mec tools, we can patch and successfully flash the new version
 
-- If zmatt's talk didnt exist, I would have explained how the lenovo firmware
-  encryption worked at this point
-
 - another example of open source community, he did something, I can use it to
   do something different and bigger (standing on the shoulders of giants..)
 
@@ -636,14 +619,14 @@ class: middle
 
 ???
 - With the ability to now patch the EC, I could try out simply updating
-  the keysym table I found with the olf T43 firware.
+  the keysym table I found with the old T43 firware.
 - That had some success, remapping working keys.  The dead keys didnt come
   back to life though
 - Searched around for something that supported the right CPU, found Radare2
 - Its got a bit of a learning curve...
 - This screenshot might not make sense to you, but I tell you that it doesnt
   make sense to me either
-- Radare didnt actually support the ARC cpu very well.
+- It Turns out, Radare didnt actually support the ARC cpu very well.
 
 ---
 
@@ -667,7 +650,6 @@ class: middle
 - some may call this yak shaving
 - This is part of what I am trying to encourage - there was a problem with
   the tool, I fixed the tool
-- maybe mention NUXI format used by the little endian instruction coding
 - Even with all that mentioned, there are still a lot of things missing
   from this architecture in radare
 - I did not implement all the radare features in this plugin - not by a
@@ -689,8 +671,8 @@ class: middle
 </div>
 
 ???
-- with better analysis, can go back to looking for more structures
-- Remember, this is trying to get better analysis to fix the keyboard
+- with better analysis, the code makes more sense
+- Remember, this was about trying to get the keyboard fixed
 - Note that much of the reverse engineering was code analysis as I looked
   for things like the capslock GPIO or the interface to the main CPU
 
@@ -708,11 +690,10 @@ class: middle
 </div>
 
 ???
-- before I was distracted with making tools better
-Have digressed from my main points, so try to bring people back
-- yak shaving to fix all the radare stuff and the encryption stuff
-- now back to looking for the keyboard structures
+- before I was distracted with making tools better,
+  now back to looking for the keyboard structures
 
+- Some quick examples of Radare's powerful commandline nature
 - This is the table I found earlier, give it a name
 
 ---
@@ -733,7 +714,7 @@ class: center, middle
 <div class="caption">Searching for references</div>
 
 ???
-- search the image for places that point to the keytab
+- search the firmware for places that point to the keytab
 ---
 
 .center[
@@ -776,8 +757,8 @@ exclude: true
 
 ???
 - Follow one of the other pointers
-- Its a bitmap with the same length
-- give it a name
+- Its a bitmap with that same length (0x110 bits)
+- give it a name too
 ---
 class: center, middle
 
@@ -785,6 +766,9 @@ class: center, middle
 <div class="caption">Show the structure with known details</div>
 
 ???
+- The end result, it starts to look understandable
+
+- I didnt just use radare though...
 
 ---
 
@@ -802,6 +786,8 @@ class: center, middle
  </div>
 
 ???
+- This alias sets hexdump to use "cannonical" format, which is the
+  most commonly used format
 
 ---
 
@@ -837,7 +823,7 @@ class: center, middle
 ???
 - HTE - HT Editor (they dont say what HT stands for)
 - handy binary searches
-- (can actually disassemble)
+- (can actually assemble too)
 ---
 
 # binwalk
@@ -854,6 +840,8 @@ class: center, middle
 </div>
 
 ???
+- Didnt actually produce anything useful for the thinkpad firmware, but it
+  is something to try on any new binary
 
 ---
 class: middle
@@ -878,11 +866,12 @@ class: middle
 ???
 - Now that I have shown you some basic radare data tools, we can get back
   to finding the keyboard patches
-- no code beyond table.00020edc
 - staring at the data
 - seeing things that looked like pointers
 - following the pointers and seeing that they pointed at things
 - Size often added, but "element size", not byte size
+- repeat
+
 TODO - above feels unclear
 ---
 
@@ -902,6 +891,7 @@ TODO - above feels unclear
 - There were two other structures
 - "Simple" replacements
 - "Complex" calls to functions
+- this slide shows the four tables needed to patch the keyboard
 - I have written some Docs on the tables we found in the thinkpad-ec repo
 
 ---
@@ -909,6 +899,7 @@ TODO - above feels unclear
 .center[<img width=1150 src="structure3.dot.svg">]
 
 ???
+- There is a lot more structure detail in there
 - Data Structures Excerpt
 - Have culled the full diagram to just those things falling out of the
   "keyboard" master table
@@ -1008,6 +999,7 @@ FIXME - add notes
 
 ???
 - not my binaries, not allowed to distribute
+
 FIXME - add more notes
 
 ---
@@ -1119,7 +1111,7 @@ class: middle
 - lwn article was invaluable
 - the Interrupt List has been a resource for a /long/ time
  - still the best resource
-- make it clear that creating a KVM hypervisor is straight forward
+- make it clear that creating a KVM hypervisor is straight forward, just fiddly
 
 ---
 
@@ -1187,7 +1179,7 @@ class: middle
 
 <!-- ** how is the firmware protected? is this a risk -->
 
-# how is the firmware protected?
+# How is the firmware protected?
 
 <table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
  <tr valign="top" height="525">
@@ -1208,6 +1200,7 @@ class: middle
 - x250 has done away with a lot of padding in their flash file
 - x260 has what appears to be a 256bute signature in the file - thus
   affording better protection than any of the other ones.
+
 FIXME - x270
 
 
@@ -1252,7 +1245,8 @@ class: middle
 - Still want a newer laptop..
 - Keeping my eyes open for alternatives that fix other issues, might allow me
   to feel less forced into the laptop replacement
-- Can mention chrombook+debian and/or cheap intel-based tablets.
+- mention pi-top
+- Can mention chromebook+debian and/or cheap intel-based tablets.
 
 <!-- ** Still want a newer laptop, dont want to spend money without keyboard -->
 <!-- ** build a usb adaptor for the raw keyboard -->
