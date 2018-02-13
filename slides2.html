@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>My personal fight against the modern laptop</title>
+ <meta charset="utf-8">
+<!--
+  The font styles below were expanded from these urls:
+  @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+  @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+  @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+-->
+ <style>
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url(https://fonts.gstatic.com/s/yanonekaffeesatz/v7/YDAoLskQQ5MOAgvHUQCcLbvy90DtE_Pg_qiF9bHvTzw.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url(https://fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaJ0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(https://fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwZ_TkvowlIOtbR7ePgFOpF4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(https://fonts.gstatic.com/s/droidserif/v6/cj2hUnSRBhwmSPr9kS589-LrC4Du4e_yfTJ8Ol60xk0.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v6/ViZhet7Ak-LRXZMXzuAfkZ0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ubuntu Mono Bold'), local('UbuntuMono-Bold'), url(https://fonts.gstatic.com/s/ubuntumono/v6/ceqTZGKHipo8pJj4molytp_TkvowlIOtbR7ePgFOpF4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Ubuntu Mono Italic'), local('UbuntuMono-Italic'), url(https://fonts.gstatic.com/s/ubuntumono/v6/KAKuHXAHZOeECOWAHsRKA-LrC4Du4e_yfTJ8Ol60xk0.ttf) format('truetype');
+}
+
+  body { font-family: 'Droid Serif'; }
+  h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: normal;
+  }
+  .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+  .footnote {
+    position: absolute;
+    bottom: 3em;
+  }
+
+.remark-slide-number {
+    bottom: 3px;
+    font-size: 20px;
+}
+
+.remark-slide-content {
+    font-size: 25px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+img {
+    margin-bottom: 0;
+}
+
+.caption {
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 20px;
+}
+
+.chapterhead h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+ </style>
+</head>
+<body>
+ <textarea id="source">
+class: center, middle
+
+<!-- * Introduction -->
+.chapterhead[
+# My fight with modern laptops
+FOSSASIA2018
+]
+.footnote[Hamish Coleman - hamish@zot.org]
+
+???
+- Thanks for coming
+- If you have questions, can you keep them until the end
+- The slides will be available online after the talk
+
+---
+
+<!-- ** Who am I -->
+
+# Who am I
+
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+<tr valign="top">
+ <td width="70%">
+  <ul>
+   <li><p>Systems Programmer by trade</p>
+   <li><p>Pull apart hardware as a hobby</p>
+   <li><p>Just a grumpy guy, annoyed by change</p>
+   <li><p>... but I want be 'constructive' about it</p>
+  </ul>
+ </td>
+
+???
+
+- my profile says I'm in Melbourne, but these days I live in a small
+  box in Hong Kong
+- You might call it Dev Ops these days.
+  I've been calling it Sys Admin for years
+- Disassembling things, finding out how things work, this is all part of the
+  same thing for me.
+- Sometimes I even put them back together
+- .. But - concerned about the pattern that the computer/design industry
+  is taking (cheapening and mass-producing/lowest-common-denominatoring)
+
+- these are updates to a previous talk?
+---
+
+<!-- ** What is in this talk -->
+
+# This talk
+
+- What is wrong with current Laptops?
+
+- How much can I change the hardware?
+
+- What is needed to change the software?
+
+- How does the firmware get flashed?
+
+- What can we do next?
+
+???
+
+- This is what is in this talk
+- I also want to Encourage people to be able to make changes to the
+  hardware around them
+- and get people back into the mentality of questioning their 'perfect',
+  'shiny' new toys - asking "what can I change??"
+
+---
+class: middle
+
+.chapterhead[
+# Chapter 1: Why
+]
+
+---
+
+<!-- ** Why did I do it (what motivated me) -->
+
+# Why did I start my fight?
+
+- Today's hardware is just not for me
+
+- To be fair, I'm a small group
+
+- New features at the *expense* of old ones?
+
+- I want you to feel like you *could* do something about it
+
+???
+- Increasingly, hardware doesnt seem to meet my requirements
+- I certainly dont want cheaper at the cost of quality
+- I dont like feeling that I an using things that dont suit me.  I assume that
+  others have had the same feeling too, and I want to encourage you to feel
+  like you could do something about that.
+- Note, I say *could* - I dont expect everyone to make changes, or to succeed,
+  just that you feel you could
+
+- could do a quick room survey and note the number of thinkpads diminishing
+  over the years
+
+---
+
+<!-- **** my laptop opinions. computers: travel, workstation, other. -->
+
+# My ideal laptop
+
+- Easily portable
+
+- Suitable for all-day use
+  - (all-day battery would be nice)
+
+- Runs Linux
+
+- No blobs
+
+- Actually is a laptop
+
+- Durable
+
+???
+- not a portable gaming rig and certainly not large enough to fit
+  a numberpad!
+- To use it all all-day requires good erganomics, which - amungst other
+  things - relates to screen quality and since I will be typing all day -
+  the keyboard
+- Beyond (say) 4 hours, battery life is more something nice to have, with
+  the assumption that if I am working all day, I am at probably near a
+  power point for some of that time.  Of course, it has to reliably hit
+  the 4 hour mark.
+- Even the Purism people have blobs that they were not able to remove from
+  their laptops (eg: M.E. blob)
+- And the Novena isnt actually a laptop
+- durable - survives being used as a laptop
+
+- have had a number of thinkpads almost hit all of that (over the
+  years) - thus I kept looking at that range.
+
+- note that price is not on that list
+
+---
+
+<!-- *** scope - reducing it make it possible for me -->
+
+# Scope
+
+- Washing-list of changes I want
+
+- Skills to do only one or two things
+
+- Look at my needs and focus on the important things
+
+- What could I do about the Keyboard on newer laptops?
+
+???
+- So, now that I have a list of things I dont like, what can I do
+- I'm not bunnie or purism - I cannot build a whole laptop
+- so, reduce the scope to the minimum feature set
+- all the modern laptops I looked at have keyboards I dont want
+- Could I do something about that?
+
+---
+
+<!-- *** keyboard - show evolution of thinkpad keyboard
+    - one slide with every keyboard I can find - up to x220
+        - 701c, 600x, r40, z61m x30, x61t, x220
+-->
+
+# Thinkpad Keyboards - "classic"
+
+ <table>
+  <tr valign="bottom">
+   <td width=10%>
+   <td>
+     <img width=403 src="thinkpad_1995_701c.jpg" />
+     <div class="caption" style="text-align: left">701c (1995)</div>
+   <td>
+     <img width=403 src="thinkpad_2002_x30.jpg" />
+     <div class="caption" style="text-align: left">x30 (2002)</div>
+  <tr valign="bottom">
+   <td width=10%>
+   <td>
+     <img width=403 src="thinkpad_2006_z61m.jpg" />
+     <div class="caption" style="text-align: left">z61m (2006)</div>
+   <td>
+     <img width=403 src="thinkpad_2011_x220_kb.jpg" />
+     <div class="caption" style="text-align: left">x220 (2011)</div>
+ </table>
+
+???
+- I like to type, I do it all day
+- Touch-typing is a muscle memory
+- Yes, there are differences with all these, but relatively small ones
+
+---
+
+<!-- - one slide with every keyboard x230 and newer -->
+
+# Thinkpad Keyboards - "modern"
+
+ <table>
+  <tr valign="bottom">
+   <td width=3%>
+   <td>
+    <img width=466 src="thinkpad_2012_x230_kb.jpg">
+    <div class="caption" style="text-align: left">x230 (2012)</div>
+   <td>
+    <img width=466 src="thinkpad_2014_x1g2.jpg">
+    <div class="caption" style="text-align: left">x1 gen2 (2014)</div>
+  <tr valign="bottom">
+   <td width=3%>
+   <td>
+    <img width=466 src="thinkpad_2015_x1g3.jpg">
+    <div class="caption" style="text-align: left">x1 gen3 (2015)</div>
+   <td>
+    <img width=466 src="thinkpad_2017_x270.jpg">
+    <div class="caption" style="text-align: left">x270 (2017)</div>
+ </table>
+
+???
+- Changing keyboards is going to happen, but I would like a choice
+- Dont remove keys!
+- note the x240, x250 and x260 are apparently physically interchangable
+
+---
+# Some 'strange' design
+
+<div>
+ <br><br>
+ <img width=1040 src="thinkpad_2014_x1g2wierd.jpg">
+ <div class="caption">x1 gen2 (2014)</div>
+</div>
+
+
+???
+- point out the other bonkers keys on the x1 g2
+- point out the x1 g2 as presaging the new mac keyboard by a couple of years
+
+---
+
+<!-- - final slide holding x220 and x230 side-by-side -->
+
+# Keyboards - old and new
+
+ <table>
+  <tr valign="top">
+   <td>
+    <img width=517 src="thinkpad_2011_x220_kb.jpg">
+    <div class="caption">Thinkpad x220</div>
+   <td>
+    <img width=517 src="thinkpad_2012_x230_kb.jpg">
+    <div class="caption">Thinkpad x230</div>
+  <tr valign="top">
+   <td>
+    PRO:
+    <ul>
+     <li><p>All the usual keys
+     <li><p>"Standard" layout
+     <li><p>Spacing helps to find keys
+    </ul>
+   <td>
+    CON:
+    <ul>
+     <li><p>Deleted keys / Strange locations
+     <li><p>Worse 'feel'
+     <li><p>No capslock light
+    </ul>
+ </table>
+
+???
+- The newest "classic" keyboard vs the oldest "modern" one
+- The laptop I wanted to replace is the x220 on the left
+- note the wedge shaped "non-island" keys, and the high travel
+- Unrelated, the one on the right is a "UK" layout
+
+---
+class: middle
+
+.chapterhead[
+# Chapter 2: Hardware replacement
+]
+
+---
+
+<!-- *** assisted by physical compatibility and ease of replacement -->
+
+# Replacing the x230 keyboard
+
+- Keyboard Connector just works...
+
+<table>
+ <tr valign="top">
+  <td>
+   <img width=517 src="keyboard_conn1.jpg">
+   <div class="caption">x220 Keyboard</div>
+  <td>
+   <img width=517 src="keyboard_conn2.jpg">
+   <div class="caption">x230 Motherboard</div>
+</table>
+
+???
+- So similar that you can just plug it in.. except for a couple of issues
+
+---
+
+# Replacing the x230 keyboard
+
+- but.. Backlight and Burnouts
+
+<img width=1040 src="keyboard_short.jpg">
+
+???
+- I didnt notice this until much later
+- all the keyboards I tried this with had had the same thing happen
+- it turns out that there is a slightly different pinout, and the design
+  sends the high current backlight though the connector.
+- This needed to be pointed out to me
+
+---
+class: center, middle
+<img width=1040 src="keyboard_short2.jpg">
+Not easy to see the burn marks
+
+???
+- I didnt believe it, until I found this small mark
+- Apparently, I was lucky - other people have had the burnout break
+  the mouse buttons
+- There is a insulating tape hack that can be applied to stop this
+  from happening (details on thinkwiki, linked from repo README)
+
+---
+
+# Replacing the x230 keyboard
+
+- Many of the top-row keys dont work
+
+- The Fn-Combos didnt match the icons
+
+<table>
+ <tr valign="top">
+  <td>
+   <img width=1040 src="keyboard_row7_x220.jpg">
+   <div class="caption">x220</div>
+ <tr valign="top">
+  <td>
+   <img width=1040 src="keyboard_row7_x230.jpg">
+   <div class="caption">x230</div>
+</table>
+
+
+???
+
+- So, connectors and burnouts delt with, can I just use the keyboard? no..
+- Seven-row vs Six-row keyboard
+
+- On the x220 keyboard,..
+- - Dead Keys: Insert, Home, Pause, PrtSc, ScrLk
+- - Wrong Keys: Del, PgUp, PgDn, Win-R, Pg-back, Pg-fwd
+- Fn-Combos that were not matching the icons
+- - Multimedia keys, Brightness, Thinklight
+- - Hibernate, Screenlock, Battery
+
+- seems a bit half-arsed, really
+
+
+---
+
+<!-- * first steps -->
+
+# Its all just software...
+
+- Schematics show all the dead keys are connected
+
+<img width=1040 src="schematic_x230.jpg">
+
+???
+- Its a different Embedded controller on the two models, but the key matrix
+  has keys in every row and column, so they all must be wired up.
+- the Schematics agree
+
+
+---
+
+<!-- ** download firmware , look for tables , hexdump/search/existing research -->
+
+# ... but software sucks
+
+<ul>
+ <li><p>Disassembled firmware from 10 years ago exists (http://ec.gnost.info/)
+ <li><p>This can be used like a Rosetta stone
+</ul>
+<div class="center">
+ <img width=750 src="firmware_gnost.png">
+ <div class="caption">T43 ec.s (viewed in less)</div>
+ <img width=750 src="firmware_hd_x220.png">
+ <div class="caption">x220 EC firmware (viewed in HT Editor)</div>
+ <img width=750 src="firmware_hd_x230.png">
+ <div class="caption">x230 EC firmware (viewed in HT Editor)</div>
+</div>
+
+???
+- If this was open source, I'd just update the code
+- Found this assembly dump quite some time ago
+- - It is for T4x and R5x laptops (T43 was from 2005)
+- I can use the T43 dump as an Oracle to make predictions about what the
+  key table might look like in the X220 and X230
+- Match the keyboard master tables, and some other small bits
+- Allows the beginnings of a firmware patch
+- However, the x230 firmware doesnt look 'sane' (E.G: The Jump Tables are wierd)
+- Still have no way to install my patch
+
+---
+# The Embedded Controller, or "EC"
+
+<br>
+.center[<img width=1040 src="ec1.dot.svg">]
+
+???
+- The Embedded Controller is a small CPU
+- Often there are others
+- Controls low level hardware
+
+---
+class: middle
+
+.chapterhead[
+# Chapter 3: Tools
+]
+
+---
+
+<!-- * breakthrough -->
+
+# Breakthrough in EC firmware
+
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+ <tr valign="top" height="525">
+  <td width="70%">
+   <ul>
+    <li><p>Matthew Chapman blogs about Battery Hacking</p>
+        <p>(See the talk before this one :-)</p>
+   </ul>
+   <p>His mec-tools software:</p>
+   <ul>
+    <li><p>Works with Thinkpad x230 EC Firmware
+    <li><p>Decrypt/encrypts
+    <li><p>Recalculates the checksums
+   </ul>
+
+  <td valign="bottom">
+    <img width=500 src="battery-titlepage.jpg" />
+</table>
+
+???
+- compliment Matthew on his talk, thank him for his software
+- mention anything from his talk that seems relevant
+
+- Assuming you missed his talk, he worked out how to decrypt his thinkpad
+  Embedded Controller firmware, patch it, re-encrypt it and add the
+  right checksums to let it be successfully flashed
+
+- with mec tools, we can patch and successfully flash the new version
+
+- another example of open source community, he did something, I can use it to
+  do something different and bigger (standing on the shoulders of giants..)
+
+---
+
+<!-- ** radare2 -->
+
+# More Reverse Engineering
+
+- Simply patching keyLocTab doesnt fully work
+
+- The Radare2 tool had support for the ARCompact instruction set
+
+<div class="center">
+ <img width=750 src="firmware_radare1.png">
+ <div class="caption">Firmware excerpt - before fixing Radare2</div>
+</div>
+
+???
+- With the ability to now patch the EC, I could try out simply updating
+  the keysym table I found with the old T43 firware.
+- That had some success, remapping working keys.  The dead keys didnt come
+  back to life though
+- Searched around for something that supported the right CPU, found Radare2
+- Its got a bit of a learning curve...
+- This screenshot might not make sense to you, but I tell you that it doesnt
+  make sense to me either
+- It Turns out, Radare didnt actually support the ARC cpu very well.
+
+---
+
+<!-- ** improving the radare analysis -->
+
+# Radare needed improvement
+
+- Radare2 ARC support actually quite flakey
+
+- E.G: scrolling backwards ended up going forwards!
+
+- Worse, the ARCompact support appeared to be half missing
+
+- Big endian only, no jump delay slot, jumps targets all wrong, no
+  illegal instruction detection
+.right[<img width=500 src="radare_patch1.png">]
+
+
+???
+- In order to successfully dig into the firmware, I need to improve the tools
+- some may call this yak shaving
+- This is part of what I am trying to encourage - there was a problem with
+  the tool, I fixed the tool
+- Even with all that mentioned, there are still a lot of things missing
+  from this architecture in radare
+- I did not implement all the radare features in this plugin - not by a
+  long shot (some conditional branching, all "ESIL" stuff, stack frames
+  and more - I'm sure)
+- (also following the theme of picking up open source and improving it.)
+---
+
+# Improvements helped
+
+- Plenty of features still to add
+
+- Improved enough that analysis was usable
+
+
+<div class="center">
+ <img width=750 src="firmware_radare2.png">
+ <div class="caption">Same excerpt - after Radare2 fixes</div>
+</div>
+
+???
+- with better analysis, the code makes more sense
+- Remember, this was about trying to get the keyboard fixed
+- Note that much of the reverse engineering was code analysis as I looked
+  for things like the capslock GPIO or the interface to the main CPU
+
+---
+
+# vbindiff
+
+ <div style="float: right">
+   <img width=631 src="tool_vbindiff.png" />
+ </div>
+ <div style="float: left">
+   <ul>
+    <li><p>Visualises binary diffs
+    <li><p>Interactive tool
+   </ul>
+ </div>
+
+???
+
+---
+
+# hte
+
+ <div style="float: left">
+   <img width=631 src="tool_hte.png" />
+ </div>
+ <div style="float: right">
+   <ul>
+    <li><p>Hex editor (as seen earlier)
+    <li><p>Simple disassembler
+    <li><p>Flexible binary search
+   </ul>
+ </div>
+
+???
+- HTE - HT Editor (they dont say what HT stands for)
+- handy binary searches
+- (can actually assemble too)
+
+---
+class: middle
+
+.chapterhead[
+# Chapter 4: Firmware Patching
+]
+
+---
+
+<!-- ** looking for structures -->
+
+# Looking for structures
+
+- EC Firmware has a large data section
+
+- Data turns out to be a large number of lists of lists
+
+.center[<img width=750 src="structure1.dot.svg">]
+
+
+???
+- Now that I have shown you some basic radare data tools, we can get back
+  to finding the keyboard patches
+- staring at the data
+- seeing things that looked like pointers
+- following the pointers and seeing that they pointed at things
+- Size often added, but "element size", not byte size
+- repeat
+
+TODO - above feels unclear
+---
+
+<!-- ** colaboration -->
+
+# Collaboration
+
+- Connect with Nitrocaster - points me at the 'live key bitmap'
+
+- Together, we find the structure for "both" kinds of Fn+Combo key maps
+
+.center[<img width=550 src="structure2.dot.svg">]
+
+???
+- Nitrocaster found me via the mec-tools blog posts and the Novena forum
+- the Dead keys were missing a "1" in the live_key_map bitmap
+- There were two other structures
+- "Simple" replacements
+- "Complex" calls to functions
+- this slide shows the four tables needed to patch the keyboard
+- I have written some Docs on the tables we found in the thinkpad-ec repo
+
+---
+
+.center[<img width=1150 src="structure3.dot.svg">]
+
+???
+- There is a lot more structure detail in there
+- Data Structures Excerpt
+- Have culled the full diagram to just those things falling out of the
+  "keyboard" master table
+
+---
+
+# Success!
+
+- After patching, a functionally complete replacement
+
+<div class="center">
+ <img width=850 src="success2.jpg">
+ <div class="caption">Hacked x230</div>
+</div>
+
+???
+- Almost fully working transplant
+- Hibernate and Screenlock keys
+- Capslock LED
+- this is where I did my happy dance because I was a grumpy old man
+who defeated the universe
+- Hold the x230 up!
+
+---
+class: middle
+
+.chapterhead[
+# Chapter 5: Community
+]
+
+---
+
+<!-- ** initial publish -->
+
+# Initial publish
+
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+ <tr valign="top" height="525">
+  <td width="70%">
+   <ul>
+    <li><p>Nitrocaster starts a thinkpads.com forum thread
+    <li><p>We explain what we have done
+    <li><p>People can't really follow easily
+   </ul>
+
+  <td valign="bottom">
+    <img width=500 src="forum1.png" />
+</table>
+
+
+???
+- We posted firmware offsets and hex strings to replace
+- People asked just how they could do this themselves
+
+---
+
+<!-- * polishing (the thinkpad-ec project) -->
+
+# Polishing the project
+
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+ <tr valign="top" height="525">
+  <td width="70%">
+   <ul>
+    <li><p>Collect all the patches into a repo
+    <li><p>Start writing installation documentation
+    <li><p>Discover who my audience actually is
+    <li><p>Re-write the install docs
+    <li><p>Try to streamline the process
+   </ul>
+
+  <td valign="bottom">
+    <img width=450 src="github1.png" />
+</table>
+???
+FIXME - add notes
+
+"This can be a common plague of free software: alienating people through documentation that doesn't relate to those with less knowledge and experience"
+ https://hackaday.com/2016/12/16/installing-libreboot/
+<!-- ** audience (the people who wanted to try to use that project) -->
+
+---
+
+<!-- ** issues with distribution -->
+
+# Issues with distribution
+
+- What is the licence on the firmware?
+
+- Just how much can I copy out without issues?
+
+- How to make it easy, without infringing?
+
+- What tools are even available?
+
+  - on Windows?
+
+???
+- not my binaries, not allowed to distribute
+
+FIXME - add more notes
+
+---
+
+<!-- ** supporting more hardware -->
+
+# Supporting more hardware
+
+- Originally, just expected x230
+
+- Forum requests kept on appearing (Everyone has their own pet model)
+
+- In the end, support 7 different models (all of the xx30 series)
+
+- Repo structure was assuming just one
+
+<div style="float: right">
+ <img width=560 src="forum2.png" />
+</div>
+
+???
+- possibly Could support more, but the low-hanging-fruit was everything
+  from the same series as the x230 laptop - the "xx30" series.  I think
+  I ended up supporting every single one from that series... (not
+  intentionally missing one)
+- Other laptops would need different hardware
+
+---
+class: middle
+
+.chapterhead[
+# Chapter 6: Digging into DOSFLASH
+]
+
+???
+
+---
+
+<!-- ** Lenovo tools -->
+<!-- * How does flashing work -->
+
+# Lenovo tools
+
+<div>
+   <ul>
+    <li><p>Lenovo has a Windows tool, I didn't look at it
+    <li><p>Bootable CD contains "dosflash.exe"
+    <li><p>Boot to PC-DOS, no drivers, clean config
+    <li><p>Runs dosflash</p>
+     <ul><li><p>Loads firmware, *magic happens*</p></ul>
+   </ul>
+ <div style="float:right">
+    <img width=450 src="dosflash1.png" />
+ </div>
+</div>
+
+???
+- There are two options offered by Lenovo - boot CD or windows installer
+- The dosflash.exe has a whole lot of cmdline options, but zmatt published
+  the ones he used
+- While dosflash appears to be a phoenix tool, there is no clear docs on
+  it, or how it does the flashing
+
+---
+
+<!-- *** itterating on implementing missing features -->
+
+# Keep improving the tracing
+
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+ <tr valign="top" height="525">
+  <td width="70%">
+   <ul>
+    <li><p>Trace DOSFLASH.EXE
+    <li><p>Add missing featues (ACPI..)
+    <li><p>Find the SMM calls
+    <li><p>Document Protocol
+   </ul>
+
+  <td>
+    <img width=610 src="emu1.png" />
+    <div class="caption">dosflash.exe Call trace</div>
+</table>
+
+???
+- Once the basic stuff is up and running, can use the tracing and debug
+  output to show me what the dosflash.exe is doing
+- Wrote a minimal 'fake' ACPI bios that passes all the tests that
+  DOSFLASH.EXE does
+- Once that was right, could find the SMM calls
+- Try to document the protocol
+- Mention that this is so far a dead end.
+
+---
+# What is SMM, anyway?
+
+.center[<img width=700 src="smm2.svg">]
+
+???
+- Some of you might not know what SMM is
+- Since I mentioned it
+- Briefly explain SMM
+
+---
+
+<!-- * next steps -->
+
+# Next Steps
+
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+ <tr valign="top" height="525">
+  <td width="70%">
+   <ul>
+    <li><p>Enjoy using my 'upgraded' laptop
+    <li><p>Continue tracing SMM
+    <li><p>Build a USB keyboard adaptor
+    <li><p>Try to get newer hardware
+    <li><p>Look for alternative laptops (open?)
+   </ul>
+
+  <td valign="bottom">
+    <img width=500 src="hw_usb_kb_FIXME.jpg" />
+    <div class="caption">Homebrew keyboard-usb adaptor</div>
+</table>
+
+???
+- I would like to continue discovering how the DOSFLASH tool works.  This
+  would need the right hardware and driver I mentioned
+- A partially finished USB keyboard circuit exists, which would allow me to
+  try and retrofit any other hardware with the classic keyboard
+- With newer hardware, I could take measurements for cutting the case apart
+  and attempt other invasive actions to force a new keyboard into it
+- Still want a newer laptop..
+- Keeping my eyes open for alternatives that fix other issues, might allow me
+  to feel less forced into the laptop replacement
+- mention pi-top
+- Can mention chromebook+debian and/or cheap intel-based tablets.
+
+<!-- ** Still want a newer laptop, dont want to spend money without keyboard -->
+<!-- ** build a usb adaptor for the raw keyboard -->
+---
+# FIXME Thinkpad 25
+
+FIXME image of it
+FIXME some dotpoints
+
+---
+
+<div class="center middle"><h1>Questions?</h1></div>
+<br><br>
+
+<div class="center middle"><h1>What Hardware do you want to improve?</h1></div>
+
+<br><br>
+- github projects:
+  - https://github.com/hamishcoleman/thinkpad-ec
+  - https://github.com/thomask77/nucular-keyboard
+- FIXME talk slides:
+  - FIXME http://www.zot.org/~hamish/2017lca.pdf
+
+<br><br>
+<div class="right">Hamish Coleman - hamish@zot.org</div>
+???
+- I'll leave you with a question: Do you have some hardware that doesnt fit
+  what you want? What do you want to do to it?
+
+TODO:
+- encourage people to discuss what they want to change on their laptop
+- ask audrey for more ideas if needed on this slide :-)
+
+---
+
+# Some Additional links
+
+### Resources
+- Old thinkpad EC disassembly: http://ec.gnost.info/
+- Using the KVM API: https://lwn.net/Articles/658511/
+- interrupt list: https://www.cs.cmu.edu/~ralf/files.html
+- forum.thinkpads.com thread: http://forum.thinkpads.com/viewtopic.php?f=69&t=120776
+
+### Tools
+- mec tools: https://github.com/eigenmatt/mec-tools
+- radare2: http://www.radare.org/r/
+- hte: http://hte.sourceforge.net/
+- vbindiff: https://github.com/madsen/vbindiff
+
+
+<!--
+
+things from abstract not specifically mentioned above:
+* various lenovo/thinkpad methods for protecting flash updates
+
+reference material:
+* https://hackaday.com/2016/10/28/apple-sucks-now-heres-a-thinkpad-buyers-guide/
+* obviously the new macbook pro
+* x62 (replacement M/B for x61) http://forum.51nb.com/forum-x62-1.html
+* t92 (vaporware 'classic' laptop from lenovo)
+
+-->
+
+---
+
+
+<!-- End slides. -->
+
+ </textarea>
+ <script src="remark-latest.min.js">
+ </script>
+ <script>
+  var slideshow = remark.create({
+    ratio: '16:9',
+    slideNumberFormat: function (current, total) {
+      presenting = 0;
+
+      now = Date.now();
+      if (now > 1484838000000 && now < 1484924400000 ) {
+          presenting = 1;
+      }
+
+      if (presenting) {
+          s = current;
+      } else {
+          s = current + '/' + total;
+      }
+
+      if (current>2) {
+        s = 'My fight with modern laptops: ' + s;
+      }
+      if (current>1) {
+        return s;
+      }
+      return '';
+    }
+  });
+ </script>
+</body>
+</html>
+
