@@ -300,7 +300,7 @@ Not easy to see the burn marks
 
 # Replacing the x230 keyboard
 
-- Many of the top-row keys dont work
+- Many of the top-row keys are dead
 
 - The Fn-Combos didnt match the icons
 
@@ -648,6 +648,12 @@ who defeated the universe
     <li><p>Try to streamline the process
    </ul>
 
+   <h1>Distribution</h1>
+   <ul>
+    <li><p>Decrypt, patch and distribute copyrighted software
+    <li><p>Surely, no issues....
+   </ul>
+
   <td valign="bottom">
     <img width=450 src="github1.png" />
 </table>
@@ -658,26 +664,10 @@ FIXME - add notes
  https://hackaday.com/2016/12/16/installing-libreboot/
 <!-- ** audience (the people who wanted to try to use that project) -->
 
----
-
-<!-- ** issues with distribution -->
-
-# Issues with distribution
-
-- What is the licence on the firmware?
-
-- Just how much can I copy out without issues?
-
-- How to make it easy, without infringing?
-
-- What tools are even available?
-
-  - on Windows?
-
-???
 - not my binaries, not allowed to distribute
 
 FIXME - add more notes
+
 
 ---
 
@@ -685,13 +675,13 @@ FIXME - add more notes
 
 # Supporting more hardware
 
-- Originally, just expected x230
+- Originally, just expected to support the x230
 
 - Forum requests kept on appearing (Everyone has their own pet model)
 
-- In the end, support 7 different models (all of the xx30 series)
+- Currently, support 7 different models (all of the xx30 series)
 
-- Repo structure was assuming just one
+- Repo structure had just assumed one model
 
 <div style="float: right">
  <img width=560 src="forum2.png" />
@@ -703,27 +693,30 @@ FIXME - add more notes
   I ended up supporting every single one from that series... (not
   intentionally missing one)
 - Other laptops would need different hardware
-
+- Have hacking support for x200, x220, x1, x240, x250, x270  and some others
 
 ---
 
 <!-- ** Lenovo tools -->
 <!-- * How does flashing work -->
 
-# Lenovo tools
+# How do the Lenovo tools work?
 
-<div>
+<table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
+ <tr valign="top" height="525">
+  <td width="75%">
    <ul>
     <li><p>Lenovo has a Windows tool, I didn't look at it
     <li><p>Bootable CD contains "dosflash.exe"
     <li><p>Boot to PC-DOS, no drivers, clean config
     <li><p>Runs dosflash</p>
      <ul><li><p>Loads firmware, *magic happens*</p></ul>
+    <li><p>Build a tool to trace dosflash
    </ul>
- <div style="float:right">
-    <img width=450 src="dosflash1.png" />
- </div>
-</div>
+
+  <td valign="bottom">
+    <img width=425 src="dosflash1.png" />
+</table>
 
 ???
 - There are two options offered by Lenovo - boot CD or windows installer
@@ -736,20 +729,20 @@ FIXME - add more notes
 
 <!-- *** itterating on implementing missing features -->
 
-# Keep improving the tracing
+# Writing a kvm hypervisor
 
 <table style="margin-top: -26.5px;margin-left: -1.75px;" cellpadding=0>
  <tr valign="top" height="525">
   <td width="70%">
    <ul>
-    <li><p>Trace DOSFLASH.EXE
+    <li><p>Traces system calls
     <li><p>Add missing featues (ACPI..)
     <li><p>Find where it sends flash commands
     <li><p>Try to Document the protocol
    </ul>
 
   <td>
-    <img width=610 src="emu1.png" />
+    <img width=600 src="emu1.png" />
     <div class="caption">dosflash.exe Call trace</div>
 </table>
 
