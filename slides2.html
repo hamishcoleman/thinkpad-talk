@@ -441,69 +441,41 @@ Not easy to see the burn marks
 - another example of open source community, he did something, I can use it to
   do something different and bigger (standing on the shoulders of giants..)
 
-- However, even with the missing keys patched into the firmware, they still
-  dont work.
----
-
-<!-- ** radare2 -->
-
-# More Reverse Engineering
-
-- Simply patching keyLocTab doesnt fully work
-
-- The Radare2 tool had support for the ARCompact instruction set
-
-<div class="center">
- <img width=750 src="firmware_radare1.png">
- <div class="caption">Firmware excerpt - before fixing Radare2</div>
-</div>
-
-???
 - With the ability to now patch the EC, I could try out simply updating
   the keysym table I found with the old T43 firware.
 - That had some success, remapping working keys.  The dead keys didnt come
   back to life though
-- Searched around for something that supported the right CPU, found Radare2
-- Its got a bit of a learning curve...
-- This screenshot might not make sense to you, but I tell you that it doesnt
-  make sense to me either
-- It Turns out, Radare didnt actually support the ARC cpu very well.
 
 ---
 
 <!-- ** improving the radare analysis -->
 
-# Radare needed improvement
+# More Reverse Engineering needed
 
-- Radare2 ARC support actually quite flakey
+- Since patching keyLocTab doesnt fully work
 
-- E.G: scrolling backwards ended up going forwards!
+- Radare2 ARC CPU support was actually quite flakey
 
-- Worse, the ARCompact support appeared to be half missing
+- Worse, the ARCompact CPU support appeared to be half missing
 
-- Big endian only, no jump delay slot, jumps targets all wrong, no
-  illegal instruction detection
 .right[<img width=500 src="radare_patch1.png">]
 
 
 ???
 - In order to successfully dig into the firmware, I need to improve the tools
-- some may call this yak shaving
 - This is part of what I am trying to encourage - there was a problem with
   the tool, I fixed the tool
-- Even with all that mentioned, there are still a lot of things missing
-  from this architecture in radare
 - I did not implement all the radare features in this plugin - not by a
   long shot (some conditional branching, all "ESIL" stuff, stack frames
   and more - I'm sure)
 - (also following the theme of picking up open source and improving it.)
 ---
 
-# Improvements helped
+# Radare success
 
-- Plenty of features still to add
+- Can show detailed dumps of code
 
-- Improved enough that analysis was usable
+- Interactively allows finding and labeling features
 
 
 <div class="center">
@@ -512,10 +484,14 @@ Not easy to see the burn marks
 </div>
 
 ???
-- with better analysis, the code makes more sense
-- Remember, this was about trying to get the keyboard fixed
+- Radare has got a bit of a learning curve...  but it is full featured and
+  well worth it
+- Using this tool, it is possible to find all the functions in the code and
+  work out what they actually do.
+- More importantly, it can find data and cross-reference it.
 - Note that much of the reverse engineering was code analysis as I looked
   for things like the capslock GPIO or the interface to the main CPU
+- I also used this for a discovering a lot of data structures
 
 ---
 
