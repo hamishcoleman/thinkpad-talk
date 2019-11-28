@@ -97,6 +97,10 @@ img {
  </style>
 </head>
 <body>
+<script>
+let title = "My fight with modern laptops"
+</script>
+
  <textarea id="source">
 background-size: contain
 background-image: url(My_personal_fight_against_the_modern_laptop.png)
@@ -1353,33 +1357,12 @@ at LCA2017
 <!-- End slides. -->
 
  </textarea>
- <script src="remark-latest.min.js">
- </script>
+ <script src="remark-latest.min.js"> </script>
+ <script src="common-slidenr.js"> </script>
  <script>
   var slideshow = remark.create({
     ratio: '16:9',
-    slideNumberFormat: function (current, total) {
-      presenting = 0;
-
-      now = Date.now();
-      if (now > 1484838000000 && now < 1484924400000 ) {
-          presenting = 1;
-      }
-
-      if (presenting) {
-          s = current;
-      } else {
-          s = current + '/' + total;
-      }
-
-      if (current>2) {
-        s = 'My fight with modern laptops: ' + s;
-      }
-      if (current>1) {
-        return s;
-      }
-      return '';
-    }
+    slideNumberFormat: slidenr
   });
  </script>
 </body>
