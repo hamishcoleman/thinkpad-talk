@@ -1182,28 +1182,6 @@ exclude: true
 - Some of you might not know what SMM is
 - Since I mentioned it
 - Briefly explain SMM
----
-
-<!-- ** writing a device driver for real hardware -->
-
-# Progress stalled
-
-- Need a kernel driver and real hardware (dangerous)
-
-<div class="center middle">
- <img width=675 src="hw_x220_mb.jpg" />
- <div class="caption">x220 motherboard, ready for destructive testing</div>
-</div>
-
-???
-- the emulation is at the point where it needs some answer from the hardware
-  that I am just not giving it
-- So, to get past this, I need to replay some of the protocol on real hardware
-  (the pictured hardware is, unfortunately, the older x220 model)
-- Have seen the abort sequence, so just need to be careful
-- Needs a kernel driver, because 32bit access (64bit in some places) and direct
-  physical mappings needed.  (Also, I didnt really want to go back to
-  writing DOS programs)
 
 ---
 
@@ -1377,10 +1355,24 @@ class: center, middle
 
 ---
 
-# Post LCA presentation developments
+# DOSFLASH protocol status:
 
-Slides after this page are all new developments after the talk was given
-at LCA2017
+- Need a kernel driver and real hardware (dangerous)
+
+<div class="center middle">
+ <img width=675 src="hw_x220_mb.jpg" />
+ <div class="caption">x220 motherboard, ready for destructive testing</div>
+</div>
+
+???
+- the emulation is at the point where it needs some answer from the hardware
+  that I am just not giving it
+- So, to get past this, I need to replay some of the protocol on real hardware
+  (the pictured hardware is, unfortunately, the older x220 model)
+- Have seen the abort sequence, so just need to be careful
+- Needs a kernel driver, because 32bit access (64bit in some places) and direct
+  physical mappings needed.  (Also, I didnt really want to go back to
+  writing DOS programs)
 
 ---
 
