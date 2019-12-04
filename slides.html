@@ -1217,6 +1217,34 @@ class: middle
 
 FIXME - x270
 
+---
+# Then comes CVE-2019-6171
+
+- Presented by Alex Matrosov and Alexandre Gazet at [blackhat 2019](https://www.blackhat.com/us-19/briefings/schedule/#breaking-through-another-side-bypassing-firmware-security-boundaries-from-embedded-controller-15902)
+
+<br>
+
+<div style="font-size: 118%;" class="caption"><i>"a user [..can..] update the Embedded Controller with unsigned firmware"</i><br> - <a href="https://support.lenovo.com/gb/en/solutions/len-27764">Lenovo Security Advisory</a></div>
+</font>
+
+
+--
+
+
+.normaltable[
+| laptop | last good | first locked version | Action |
+| ------ | --------- | -------------------- | ------ |
+| t430   | BIOS 2.81, EC 1.13 | BIOS 2.82, EC 1.14 | roll back to 2.81 |
+| t430s  | BIOS 2.75, EC 1.16 | BIOS 2.76, EC 1.16 | _untested_ |
+| t530, t530i | BIOS 2.76, EC 1.13 | BIOS 2.77, EC 1.14 | _untested_ |
+| w530   | BIOS 2.75, EC 1.13 | BIOS 2.76, EC 1.14 | _untested_ |
+| x230   | BIOS 2.76, EC 1.14 | BIOS 2.77, EC 1.15 | _untested_ |
+| x230t  | BIOS 2.73, EC 1.14 | BIOS 2.75, EC 1.15 | _untested_ |
+]
+
+???
+- Lenovo has a "secure rollback prevention" option in their BIOS settings,
+so turning that off should allow rollbacks
 
 ---
 class: middle
