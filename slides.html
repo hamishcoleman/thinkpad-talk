@@ -125,7 +125,6 @@ class: center, middle
 <!-- * Introduction -->
 .chapterhead[
 # My fight with modern laptops
-LCA2017
 ]
 .footnote[Hamish Coleman - hamish@zot.org]
 
@@ -224,7 +223,7 @@ class: middle
 
 - Keep getting smaller - this is good
 
-- At the expense of ports, durability, keys - this is bad
+- At the expense of ports, durability, keyboards - this is bad
 
 <div class="center">
  <img width=600 src="macbook_wheel.jpg" />
@@ -247,16 +246,15 @@ class: middle
 
 - Easily portable
 
+- Durable
+
 - Suitable for all-day use
-  - (all-day battery would be nice)
+
+- Actually is a laptop
 
 - Runs Linux
 
 - No blobs
-
-- Actually is a laptop
-
-- Durable
 
 ???
 - not a portable gaming rig and certainly not large enough to fit
@@ -472,9 +470,9 @@ Not easy to see the burn marks
 
 # Replacing the x230 keyboard
 
-- Many of the top-row keys dont work
+- Many of the top-row keys are "dead keys"
 
-- The Fn-Combos didnt match the icons
+- The Fn-Combos didn't match the icons
 
 <table>
  <tr valign="top">
@@ -501,7 +499,6 @@ Not easy to see the burn marks
 - - Hibernate, Screenlock, Battery
 
 - seems a bit half-arsed, really
-
 
 ---
 
@@ -652,7 +649,7 @@ class: middle
 
 - E.G: scrolling backwards ended up going forwards!
 
-- Worse, the ARCompact support appeared to be half missing
+- Worse, the ARCompact CPU support appeared to be half missing
 
 - Big endian only, no jump delay slot, jumps targets all wrong, no
   illegal instruction detection
@@ -694,7 +691,7 @@ class: middle
 
 # Radare is powerful
 
-- Improving it helped me learn it
+- Improving it helped me learn to use it
 
 - Used it to return to looking for structures
 
@@ -1022,13 +1019,13 @@ FIXME - add more notes
 
 # Supporting more hardware
 
-- Originally, just expected x230
+- Originally, just expected to support the x230
 
 - Forum requests kept on appearing (Everyone has their own pet model)
 
-- In the end, support 7 different models (all of the xx30 series)
+- Currently, support 7 different models (all of the xx30 series)
 
-- Repo structure was assuming just one
+- Repo structure had just assumed one model
 
 <div style="float: right">
  <img width=560 src="forum2.png" />
@@ -1040,6 +1037,7 @@ FIXME - add more notes
   I ended up supporting every single one from that series... (not
   intentionally missing one)
 - Other laptops would need different hardware
+- Have hacking support for x200, x220, x1, x240, x250, x270  and some others
 
 ---
 class: middle
@@ -1137,14 +1135,14 @@ class: middle
  <tr valign="top" height="525">
   <td width="70%">
    <ul>
-    <li><p>Trace DOSFLASH.EXE
+    <li><p>Trace DOSFLASH.EXE syscalls
     <li><p>Add missing featues (ACPI..)
     <li><p>Find the SMM calls
-    <li><p>Document Protocol
+    <li><p>Try to Document the Protocol
    </ul>
 
   <td>
-    <img width=610 src="emu1.png" />
+    <img width=600 src="emu1.png" />
     <div class="caption">dosflash.exe Call trace</div>
 </table>
 
